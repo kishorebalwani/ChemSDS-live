@@ -9,6 +9,8 @@ import { Route, Switch, Router as WouterRouter } from 'wouter';
 
 const queryClient = new QueryClient();
 
+const WA_LINK = "https://wa.me/919183519390?text=Hi%2C%20I%20need%20SDS%2FMSDS%20for%20my%20product(s).%0A%0APlease%20find%20the%20details%20below%3A%0A%0A1.%20Product%20Name%3A%20%0A2.%20Language%20Required%3A%20%0A3.%20Country%20of%20Use%2FExport%3A%20%0A4.%20Number%20of%20Products%3A%20%0A%0APlease%20share%20pricing%20and%20turnaround%20time.";
+
 function useReveal<T extends HTMLElement = HTMLDivElement>() {
   const ref = useRef<T>(null);
   useEffect(() => {
@@ -52,7 +54,7 @@ function Nav() {
         <a href="#contact" onClick={close}>Contact</a>
       </div>
       <div className="nav-actions">
-        <a className="nav-whatsapp" href="https://wa.me/919183519390?text=Hi%2C%20I%20need%20a%20quote%20for%20SDS%2FMSDS%20authoring." target="_blank" rel="noreferrer" onClick={close}>◌&nbsp; WhatsApp</a>
+        <a className="nav-whatsapp" href={WA_LINK} target="_blank" rel="noreferrer" onClick={close}>◌&nbsp; WhatsApp</a>
         <a className="nav-cta" href="#contact" onClick={close} data-testid="link-nav-contact">Get a Quote</a>
       </div>
       <button className="menu-toggle" onClick={() => setOpen((value) => !value)} aria-label={open ? 'Close navigation' : 'Open navigation'} data-testid="button-menu">
@@ -106,7 +108,7 @@ function Hero() {
           </div>
           <div className="hero-actions">
             <a className="button-mint" href="#contact" data-testid="link-hero-start">Get a Quick Quote <ArrowRight size={16} /></a>
-            <a className="button-outline" href="https://wa.me/919183519390?text=Hi%2C%20I%20need%20a%20rush%20SDS%20quote." target="_blank" rel="noreferrer" data-testid="link-hero-services"><MessageCircle size={17} /> WhatsApp for Rush</a>
+            <a className="button-outline" href={WA_LINK} target="_blank" rel="noreferrer" data-testid="link-hero-services"><MessageCircle size={17} /> WhatsApp for Rush</a>
           </div>
           <div className="hero-stats">
             <span><strong>24–48h</strong><small>TURNAROUND</small></span>
@@ -313,7 +315,7 @@ function Contact() {
             <a href="tel:+919183519390" className="contact-detail" style={{ textDecoration: 'none', color: 'inherit' }}>
               <Phone size={16} /> +91-9183519390
             </a>
-            <a href="https://wa.me/919183519390?text=Hi%2C%20I%20need%20a%20quote%20for%20SDS%2FMSDS%20authoring." target="_blank" rel="noreferrer" className="contact-detail" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <a href={WA_LINK} target="_blank" rel="noreferrer" className="contact-detail" style={{ textDecoration: 'none', color: 'inherit' }}>
               <MessageCircle size={16} /> Chat for instant response
             </a>
             <a href="mailto:info@chemsds.in?subject=SDS%20Authoring%20Inquiry" className="contact-detail" style={{ textDecoration: 'none', color: 'inherit' }}>
@@ -387,7 +389,7 @@ function Home() {
       <FAQ />
       <Contact />
       <Footer />
-      <a className="whatsapp" href="https://wa.me/919183519390?text=Hi%2C%20I%20need%20a%20quote%20for%20SDS%2FMSDS%20authoring." target="_blank" rel="noreferrer" aria-label="Contact ChemSDS on WhatsApp" data-testid="link-whatsapp">
+      <a className="whatsapp" href={WA_LINK} target="_blank" rel="noreferrer" aria-label="Contact ChemSDS on WhatsApp" data-testid="link-whatsapp">
         <MessageCircle size={23} />
       </a>
     </div>
