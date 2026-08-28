@@ -299,11 +299,26 @@ function FAQ() {
 
 function Contact() {
   const [sent, setSent] = useState(false);
+
   const onSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    const formData = new FormData(event.currentTarget);
+    
+    const clientName = formData.get('client_name') || 'Not specified';
+    const clientContact = formData.get('client_contact') || 'Not specified';
+    const productName = formData.get('name') || 'Not specified';
+    const language = formData.get('email') || 'English';
+    const country = formData.get('company') || 'Not specified';
+    const productsCount = formData.get('products') || '1';
+    const message = formData.get('message') || 'None';
+
+    const text = `Hi, I need SDS/MSDS for my product(s).%0A%0APlease find the details below:%0A• Client Name: ${encodeURIComponent(String(clientName))}%0A• Contact / Company: ${encodeURIComponent(String(clientContact))}%0A• Product Name: ${encodeURIComponent(String(productName))}%0A• Language Required: ${encodeURIComponent(String(language))}%0A• Country of Use/Export: ${encodeURIComponent(String(country))}%0A• Number of Products: ${encodeURIComponent(String(productsCount))}%0A• Additional Details: ${encodeURIComponent(String(message))}%0A%0APlease share pricing and turnaround time.`;
+
     setSent(true);
     event.currentTarget.reset();
+    window.open(`https://wa.me/919183519390?text=${text}`, '_blank');
   };
+
   return (
     <section className="section contact-section dark-section" id="contact">
       <div className="container contact-layout">
@@ -324,6 +339,16 @@ function Contact() {
           </div>
         </div>
         <form className="contact-form reveal" ref={useReveal<HTMLFormElement>()} onSubmit={onSubmit} data-testid="form-contact">
+          <div className="field-row">
+            <div className="field">
+              <label htmlFor="client_name">Your Name / Company</label>
+              <input id="client_name" name="client_name" required placeholder="Your Name / Company" />
+            </div>
+            <div className="field">
+              <label htmlFor="client_contact">Your Email / Phone</label>
+              <input id="client_contact" name="client_contact" required placeholder="Email or Phone Number" />
+            </div>
+          </div>
           <div className="field-row">
             <div className="field">
               <label htmlFor="name">Product name</label>
@@ -349,9 +374,9 @@ function Contact() {
             <textarea id="message" name="message" placeholder="Tell us about your formulation or deadline." data-testid="input-message" />
           </div>
           <div className="submit-row">
-            {sent ? <span className="form-status" data-testid="status-form-sent">Thanks — we’ll be in touch shortly.</span> : <span className="form-status">Replies within one business day.</span>}
+            {sent ? <span className="form-status" data-testid="status-form-sent">Redirecting to WhatsApp...</span> : <span className="form-status">Instant reply on WhatsApp.</span>}
             <button className="button-mint" type="submit" data-testid="button-submit-contact">
-              {sent ? 'Send another' : 'Send enquiry'} <ArrowRight size={15} />
+              {sent ? 'Send another inquiry' : 'Send Enquiry via WhatsApp'} <ArrowRight size={15} />
             </button>
           </div>
         </form>
