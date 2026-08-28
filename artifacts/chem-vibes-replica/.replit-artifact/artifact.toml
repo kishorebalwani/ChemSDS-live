@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "ChemVibes SDS/MSDS Website"
+description = "A responsive website replica for a GHS-compliant safety data sheet and MSDS service, based on the provided reference site and focused on industries, compliance, and rapid document delivery."
+version = "1.0.0"
+id = "artifacts/chem-vibes-replica"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23720
+
+[services.development]
+run = "pnpm --filter @workspace/chem-vibes-replica run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/chem-vibes-replica", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/chem-vibes-replica/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23720"
+BASE_PATH = "/"
