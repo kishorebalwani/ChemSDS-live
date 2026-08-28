@@ -52,7 +52,7 @@ function Nav() {
         <a href="#contact" onClick={close}>Contact</a>
       </div>
       <div className="nav-actions">
-        <a className="nav-whatsapp" href="https://wa.me/919183519390" target="_blank" rel="noreferrer" onClick={close}>◌&nbsp; WhatsApp</a>
+        <a className="nav-whatsapp" href="https://wa.me/919183519390?text=Hi%2C%20I%20need%20a%20quote%20for%20SDS%2FMSDS%20authoring." target="_blank" rel="noreferrer" onClick={close}>◌&nbsp; WhatsApp</a>
         <a className="nav-cta" href="#contact" onClick={close} data-testid="link-nav-contact">Get a Quote</a>
       </div>
       <button className="menu-toggle" onClick={() => setOpen((value) => !value)} aria-label={open ? 'Close navigation' : 'Open navigation'} data-testid="button-menu">
@@ -106,7 +106,7 @@ function Hero() {
           </div>
           <div className="hero-actions">
             <a className="button-mint" href="#contact" data-testid="link-hero-start">Get a Quick Quote <ArrowRight size={16} /></a>
-            <a className="button-outline" href="https://wa.me/919183519390" target="_blank" rel="noreferrer" data-testid="link-hero-services"><MessageCircle size={17} /> WhatsApp for Rush</a>
+            <a className="button-outline" href="https://wa.me/919183519390?text=Hi%2C%20I%20need%20a%20rush%20SDS%20quote." target="_blank" rel="noreferrer" data-testid="link-hero-services"><MessageCircle size={17} /> WhatsApp for Rush</a>
           </div>
           <div className="hero-stats">
             <span><strong>24–48h</strong><small>TURNAROUND</small></span>
@@ -305,14 +305,53 @@ function Contact() {
   return (
     <section className="section contact-section dark-section" id="contact">
       <div className="container contact-layout">
-          <div className="reveal" ref={useReveal()}><div className="eyebrow">Contact</div><h2 className="section-heading">Get a quick quote within 1 hour</h2><p className="section-copy">Share your product details and we’ll respond with pricing and turnaround. WhatsApp for instant response.</p>
-           <div className="contact-details"><div className="contact-detail"><Phone size={16} /> +91-9183519390</div><div className="contact-detail"><MessageCircle size={16} /> Chat for instant response</div><div className="contact-detail"><Mail size={16} /> chemsds.in</div></div>
+        <div className="reveal" ref={useReveal()}>
+          <div className="eyebrow">Contact</div>
+          <h2 className="section-heading">Get a quick quote within 1 hour</h2>
+          <p className="section-copy">Share your product details and we’ll respond with pricing and turnaround. WhatsApp for instant response.</p>
+          <div className="contact-details">
+            <a href="tel:+919183519390" className="contact-detail" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <Phone size={16} /> +91-9183519390
+            </a>
+            <a href="https://wa.me/919183519390?text=Hi%2C%20I%20need%20a%20quote%20for%20SDS%2FMSDS%20authoring." target="_blank" rel="noreferrer" className="contact-detail" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <MessageCircle size={16} /> Chat for instant response
+            </a>
+            <a href="mailto:info@chemsds.in?subject=SDS%20Authoring%20Inquiry" className="contact-detail" style={{ textDecoration: 'none', color: 'inherit' }}>
+              <Mail size={16} /> info@chemsds.in
+            </a>
+          </div>
         </div>
         <form className="contact-form reveal" ref={useReveal<HTMLFormElement>()} onSubmit={onSubmit} data-testid="form-contact">
-           <div className="field-row"><div className="field"><label htmlFor="name">Product name</label><input id="name" name="name" required placeholder="Product name" data-testid="input-name" /></div><div className="field"><label htmlFor="email">Language required</label><input id="email" name="email" required placeholder="English, Spanish..." data-testid="input-email" /></div></div>
-           <div className="field-row"><div className="field"><label htmlFor="company">Country of use / export</label><input id="company" name="company" placeholder="Destination market" data-testid="input-company" /></div><div className="field"><label htmlFor="products">Number of products</label><input id="products" name="products" placeholder="1" data-testid="input-products" /></div></div>
-           <div className="field"><label htmlFor="message">Additional details</label><textarea id="message" name="message" placeholder="Tell us about your formulation or deadline." data-testid="input-message" /></div>
-          <div className="submit-row">{sent ? <span className="form-status" data-testid="status-form-sent">Thanks — we’ll be in touch shortly.</span> : <span className="form-status">Replies within one business day.</span>}<button className="button-mint" type="submit" data-testid="button-submit-contact">{sent ? 'Send another' : 'Send enquiry'} <ArrowRight size={15} /></button></div>
+          <div className="field-row">
+            <div className="field">
+              <label htmlFor="name">Product name</label>
+              <input id="name" name="name" required placeholder="Product name" data-testid="input-name" />
+            </div>
+            <div className="field">
+              <label htmlFor="email">Language required</label>
+              <input id="email" name="email" required placeholder="English, Spanish..." data-testid="input-email" />
+            </div>
+          </div>
+          <div className="field-row">
+            <div className="field">
+              <label htmlFor="company">Country of use / export</label>
+              <input id="company" name="company" placeholder="Destination market" data-testid="input-company" />
+            </div>
+            <div className="field">
+              <label htmlFor="products">Number of products</label>
+              <input id="products" name="products" placeholder="1" data-testid="input-products" />
+            </div>
+          </div>
+          <div className="field">
+            <label htmlFor="message">Additional details</label>
+            <textarea id="message" name="message" placeholder="Tell us about your formulation or deadline." data-testid="input-message" />
+          </div>
+          <div className="submit-row">
+            {sent ? <span className="form-status" data-testid="status-form-sent">Thanks — we’ll be in touch shortly.</span> : <span className="form-status">Replies within one business day.</span>}
+            <button className="button-mint" type="submit" data-testid="button-submit-contact">
+              {sent ? 'Send another' : 'Send enquiry'} <ArrowRight size={15} />
+            </button>
+          </div>
         </form>
       </div>
     </section>
@@ -320,17 +359,48 @@ function Contact() {
 }
 
 function Footer() {
-  return <footer className="contact-section" style={{ paddingTop: 0 }}>
-     <div className="container footer"><Brand /><span>Serving India &amp; Global Markets</span><div className="footer-links"><a href="#services" data-testid="link-footer-services">Services</a><a href="#industries" data-testid="link-footer-industries">Industries</a><a href="#contact" data-testid="link-footer-contact">Contact</a></div></div>
-  </footer>;
+  return (
+    <footer className="contact-section" style={{ paddingTop: 0 }}>
+      <div className="container footer">
+        <Brand />
+        <span>Serving India &amp; Global Markets</span>
+        <div className="footer-links">
+          <a href="#services" data-testid="link-footer-services">Services</a>
+          <a href="#industries" data-testid="link-footer-industries">Industries</a>
+          <a href="#contact" data-testid="link-footer-contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+  );
 }
 
 function Home() {
-  return <div className="site-shell"><Hero /><StandardsRibbon /><Services /><Process /><WhyChemSds /><Industries /><Testimonials /><FAQ /><Contact /><Footer /><a className="whatsapp" href="https://wa.me/919876543210" target="_blank" rel="noreferrer" aria-label="Contact ChemSDS on WhatsApp" data-testid="link-whatsapp"><MessageCircle size={23} /></a></div>;
+  return (
+    <div className="site-shell">
+      <Hero />
+      <StandardsRibbon />
+      <Services />
+      <Process />
+      <WhyChemSds />
+      <Industries />
+      <Testimonials />
+      <FAQ />
+      <Contact />
+      <Footer />
+      <a className="whatsapp" href="https://wa.me/919183519390?text=Hi%2C%20I%20need%20a%20quote%20for%20SDS%2FMSDS%20authoring." target="_blank" rel="noreferrer" aria-label="Contact ChemSDS on WhatsApp" data-testid="link-whatsapp">
+        <MessageCircle size={23} />
+      </a>
+    </div>
+  );
 }
 
 function Router() {
-  return <Switch><Route path="/" component={Home} /><Route component={NotFound} /></Switch>;
+  return (
+    <Switch>
+      <Route path="/" component={Home} />
+      <Route component={NotFound} />
+    </Switch>
+  );
 }
 
 function RoutedErrorBoundary({ children }: { children: ReactNode }) {
@@ -338,7 +408,18 @@ function RoutedErrorBoundary({ children }: { children: ReactNode }) {
 }
 
 function App() {
-  return <QueryClientProvider client={queryClient}><TooltipProvider><WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}><RoutedErrorBoundary><Router /></RoutedErrorBoundary></WouterRouter><Toaster /></TooltipProvider></QueryClientProvider>;
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}>
+          <RoutedErrorBoundary>
+            <Router />
+          </RoutedErrorBoundary>
+        </WouterRouter>
+        <Toaster />
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
 }
 
 export default App;
