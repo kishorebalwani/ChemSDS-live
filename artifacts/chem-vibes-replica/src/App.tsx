@@ -147,16 +147,16 @@ const trustCards = [
 function TrustBadgesSection() {
   const ref = useReveal();
   return (
-    <section className="section" style={{ paddingTop: '32px', paddingBottom: '32px', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+    <section className="section" style={{ paddingTop: '28px', paddingBottom: '32px', borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
       <div className="container">
-        <p style={{ textAlign: 'center', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', marginBottom: '20px' }}>
+        <p style={{ textAlign: 'center', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#374151', marginBottom: '20px' }}>
           Authored Strictly in Accordance With Global Regulatory Standards
         </p>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }} className="reveal" ref={ref}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }} className="reveal" ref={ref}>
           {trustCards.map((item) => (
-            <div key={item.standard} style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '18px 14px', textAlign: 'center' }}>
-              <div style={{ color: '#38ef7d', fontWeight: 700, fontSize: '1.05rem', marginBottom: '4px' }}>{item.standard}</div>
-              <div style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.6)' }}>{item.desc}</div>
+            <div key={item.standard} style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '12px', padding: '18px 14px', textAlign: 'center', boxShadow: '0 2px 8px rgba(0,0,0,0.03)' }}>
+              <div style={{ color: '#059669', fontWeight: 800, fontSize: '1.05rem', marginBottom: '4px' }}>{item.standard}</div>
+              <div style={{ fontSize: '0.82rem', color: '#4b5563', fontWeight: 500 }}>{item.desc}</div>
             </div>
           ))}
         </div>
@@ -187,7 +187,7 @@ const ghsSections = [
 function GHSArchitectureSection() {
   const ref = useReveal();
   return (
-    <section className="section dark-section" id="standards-grid">
+    <section className="section" id="standards-grid" style={{ paddingTop: '50px', paddingBottom: '50px' }}>
       <div className="container">
         <div className="section-head reveal" ref={ref}>
           <div>
@@ -201,11 +201,11 @@ function GHSArchitectureSection() {
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(230px, 1fr))', gap: '12px', marginBottom: '36px' }}>
           {ghsSections.map((sec, idx) => (
-            <div key={sec.num} className="reveal" ref={useReveal()} style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '10px', padding: '14px 16px', display: 'flex', alignItems: 'center', gap: '12px', transitionDelay: `${idx * 25}ms` }}>
-              <span style={{ fontSize: '0.75rem', fontWeight: 700, fontFamily: 'monospace', color: '#38ef7d', background: 'rgba(56,239,125,0.12)', padding: '2px 6px', borderRadius: '4px' }}>
+            <div key={sec.num} className="reveal" ref={useReveal()} style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '10px', padding: '14px 16px', display: 'flex', alignItems: 'center', gap: '12px', transitionDelay: `${idx * 25}ms`, boxShadow: '0 2px 6px rgba(0,0,0,0.02)' }}>
+              <span style={{ fontSize: '0.75rem', fontWeight: 800, fontFamily: 'monospace', color: '#059669', background: 'rgba(5,150,105,0.1)', padding: '3px 7px', borderRadius: '5px' }}>
                 {sec.num}
               </span>
-              <span style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.85)', fontWeight: 500 }}>
+              <span style={{ fontSize: '0.85rem', color: '#1f2937', fontWeight: 600 }}>
                 {sec.title}
               </span>
             </div>
@@ -213,9 +213,9 @@ function GHSArchitectureSection() {
         </div>
 
         {/* Sample Request Banner */}
-        <div style={{ background: 'linear-gradient(135deg, rgba(56,239,125,0.08) 0%, rgba(255,255,255,0.02) 100%)', border: '1px solid rgba(56,239,125,0.25)', borderRadius: '16px', padding: '28px', textAlign: 'center', maxWidth: '750px', margin: '0 auto' }}>
-          <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#fff', marginBottom: '8px' }}>Need to inspect our authoring quality?</h3>
-          <p style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.7)', marginBottom: '18px' }}>Request a complete 16-section sample SDS or get a free compliance check on your existing sheet.</p>
+        <div style={{ background: '#ffffff', border: '1px solid rgba(5,150,105,0.3)', borderRadius: '16px', padding: '32px 24px', textAlign: 'center', maxWidth: '750px', margin: '0 auto', boxShadow: '0 4px 20px rgba(5,150,105,0.08)' }}>
+          <h3 style={{ fontSize: '1.3rem', fontWeight: 800, color: '#111827', marginBottom: '8px' }}>Need to inspect our authoring quality?</h3>
+          <p style={{ fontSize: '0.9rem', color: '#4b5563', marginBottom: '20px', lineHeight: 1.5 }}>Request a complete 16-section sample SDS or get a free compliance check on your existing sheet.</p>
           <a href={WA_SAMPLE_LINK} target="_blank" rel="noreferrer" className="button-mint" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}>
             <span>Get Sample SDS via WhatsApp</span>
             <ArrowRight size={15} />
