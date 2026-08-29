@@ -10,6 +10,7 @@ import { Route, Switch, Router as WouterRouter } from 'wouter';
 const queryClient = new QueryClient();
 
 const WA_LINK = "https://wa.me/919183519390?text=Hi%2C%20I%20need%20SDS%2FMSDS%20for%20my%20product(s).%0A%0APlease%20find%20the%20details%20below%3A%0A%0A1.%20Product%20Name%3A%20%0A2.%20Language%20Required%3A%20%0A3.%20Country%20of%20Use%2FExport%3A%20%0A4.%20Number%20of%20Products%3A%20%0A%0APlease%20share%20pricing%20and%20turnaround%20time.";
+const WA_SAMPLE_LINK = "https://wa.me/919183519390?text=Hi%2C%20I%20would%20like%20to%20review%20a%20sample%2016-section%20GHS%20SDS%20document.";
 
 function useReveal<T extends HTMLElement = HTMLDivElement>() {
   const ref = useRef<T>(null);
@@ -45,10 +46,10 @@ function Nav() {
       <Brand />
       <div className="nav-links">
         <a href="#services" onClick={close} data-testid="link-services">Services</a>
+        <a href="#standards-grid" onClick={close}>16-Sections</a>
         <a href="#process" onClick={close} data-testid="link-process">Process</a>
         <a href="#industries" onClick={close} data-testid="link-industries">Industries</a>
         <a href="#why" onClick={close}>Compliance</a>
-        <a href="#contact" onClick={close}>Samples</a>
         <a href="#reviews" onClick={close}>Reviews</a>
         <a href="#faq" onClick={close} data-testid="link-faq">FAQs</a>
         <a href="#contact" onClick={close}>Contact</a>
@@ -136,6 +137,95 @@ function StandardsRibbon() {
   );
 }
 
+const trustCards = [
+  { standard: 'GHS Rev. 10', desc: 'UN Globally Harmonized System' },
+  { standard: 'OSHA HazCom 2012', desc: 'US 29 CFR 1910.1200' },
+  { standard: 'EU REACH / CLP', desc: 'Regulation (EU) 2020/878' },
+  { standard: 'Amazon Hazmat', desc: 'FBA Dangerous Goods Review' },
+];
+
+function TrustBadgesSection() {
+  const ref = useReveal();
+  return (
+    <section className="section" style={{ paddingTop: '32px', paddingBottom: '32px', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+      <div className="container">
+        <p style={{ textAlign: 'center', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', marginBottom: '20px' }}>
+          Authored Strictly in Accordance With Global Regulatory Standards
+        </p>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }} className="reveal" ref={ref}>
+          {trustCards.map((item) => (
+            <div key={item.standard} style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '18px 14px', textAlign: 'center' }}>
+              <div style={{ color: '#38ef7d', fontWeight: 700, fontSize: '1.05rem', marginBottom: '4px' }}>{item.standard}</div>
+              <div style={{ fontSize: '0.78rem', color: 'rgba(255,255,255,0.6)' }}>{item.desc}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const ghsSections = [
+  { num: '01', title: 'Identification & Supplier' },
+  { num: '02', title: 'Hazard(s) Identification' },
+  { num: '03', title: 'Composition / Ingredients' },
+  { num: '04', title: 'First-Aid Measures' },
+  { num: '05', title: 'Fire-Fighting Measures' },
+  { num: '06', title: 'Accidental Release' },
+  { num: '07', title: 'Handling & Storage' },
+  { num: '08', title: 'Exposure Controls & PPE' },
+  { num: '09', title: 'Physical & Chemical Prop.' },
+  { num: '10', title: 'Stability & Reactivity' },
+  { num: '11', title: 'Toxicological Information' },
+  { num: '12', title: 'Ecological Information' },
+  { num: '13', title: 'Disposal Considerations' },
+  { num: '14', title: 'Transport Info (UN/IATA)' },
+  { num: '15', title: 'Regulatory Information' },
+  { num: '16', title: 'Other / Revision Info' },
+];
+
+function GHSArchitectureSection() {
+  const ref = useReveal();
+  return (
+    <section className="section dark-section" id="standards-grid">
+      <div className="container">
+        <div className="section-head reveal" ref={ref}>
+          <div>
+            <div className="eyebrow">Full Coverage</div>
+            <h2 className="section-heading">Complete 16-Section GHS Architecture</h2>
+          </div>
+          <p className="section-copy">
+            Every document is authored with comprehensive technical classifications, toxicology mappings, and global transport compliance.
+          </p>
+        </div>
+
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(230px, 1fr))', gap: '12px', marginBottom: '36px' }}>
+          {ghsSections.map((sec, idx) => (
+            <div key={sec.num} className="reveal" ref={useReveal()} style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.06)', borderRadius: '10px', padding: '14px 16px', display: 'flex', alignItems: 'center', gap: '12px', transitionDelay: `${idx * 25}ms` }}>
+              <span style={{ fontSize: '0.75rem', fontWeight: 700, fontFamily: 'monospace', color: '#38ef7d', background: 'rgba(56,239,125,0.12)', padding: '2px 6px', borderRadius: '4px' }}>
+                {sec.num}
+              </span>
+              <span style={{ fontSize: '0.85rem', color: 'rgba(255,255,255,0.85)', fontWeight: 500 }}>
+                {sec.title}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        {/* Sample Request Banner */}
+        <div style={{ background: 'linear-gradient(135deg, rgba(56,239,125,0.08) 0%, rgba(255,255,255,0.02) 100%)', border: '1px solid rgba(56,239,125,0.25)', borderRadius: '16px', padding: '28px', textAlign: 'center', maxWidth: '750px', margin: '0 auto' }}>
+          <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#fff', marginBottom: '8px' }}>Need to inspect our authoring quality?</h3>
+          <p style={{ fontSize: '0.88rem', color: 'rgba(255,255,255,0.7)', marginBottom: '18px' }}>Request a complete 16-section sample SDS or get a free compliance check on your existing sheet.</p>
+          <a href={WA_SAMPLE_LINK} target="_blank" rel="noreferrer" className="button-mint" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none' }}>
+            <span>Get Sample SDS via WhatsApp</span>
+            <ArrowRight size={15} />
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 const services = [
   { number: '01', title: 'SDS/MSDS Preparation', text: 'Professionally authored Safety Data Sheets in 16-section GHS format, ready for global submission.', icon: FileCheck2 },
   { number: '02', title: 'GHS Classification', text: 'Accurate hazard classification, pictograms, and precautionary statements as per GHS Rev 10.', icon: ShieldCheck },
@@ -151,8 +241,8 @@ function Services() {
     <section className="section services" id="services">
       <div className="container">
         <div className="section-head reveal" ref={ref}>
-           <div><div className="eyebrow">Services</div><h2 className="section-heading">Everything you need for SDS compliance</h2></div>
-           <p className="section-copy">Professional SDS/MSDS authoring services for chemical products in compliance with global standards including GHS, OSHA &amp; REACH.</p>
+          <div><div className="eyebrow">Services</div><h2 className="section-heading">Everything you need for SDS compliance</h2></div>
+          <p className="section-copy">Professional SDS/MSDS authoring services for chemical products in compliance with global standards including GHS, OSHA &amp; REACH.</p>
         </div>
         <div className="service-grid service-grid-six">
           {services.map((service, index) => <ServiceCard key={service.title} service={service} index={index} />)}
@@ -165,10 +255,15 @@ function Services() {
 function ServiceCard({ service, index }: { service: (typeof services)[number]; index: number }) {
   const cardRef = useReveal();
   const Icon = service.icon;
-  return <article className="service-card reveal" ref={cardRef} style={{ transitionDelay: `${index * 80}ms` }} data-testid={`card-service-${service.number}`}>
-    <div className="service-number">{service.number}</div><Icon size={19} strokeWidth={1.7} style={{ position: 'absolute', right: 29, top: 29 }} />
-    <h3>{service.title}</h3><p className="service-text">{service.text}</p><span className="arrow-badge"><ArrowDownRight size={16} /></span>
-  </article>;
+  return (
+    <article className="service-card reveal" ref={cardRef} style={{ transitionDelay: `${index * 80}ms` }} data-testid={`card-service-${service.number}`}>
+      <div className="service-number">{service.number}</div>
+      <Icon size={19} strokeWidth={1.7} style={{ position: 'absolute', right: 29, top: 29 }} />
+      <h3>{service.title}</h3>
+      <p className="service-text">{service.text}</p>
+      <span className="arrow-badge"><ArrowDownRight size={16} /></span>
+    </article>
+  );
 }
 
 const steps = [
@@ -183,13 +278,17 @@ function Process() {
     <section className="section process-section" id="process">
       <div className="container">
         <div className="section-head reveal" ref={useReveal()}>
-           <div><div className="eyebrow">Process</div><h2 className="section-heading">From formulation to export-ready SDS</h2></div>
-           <p className="section-copy">A simple 4-step workflow to get compliant safety documentation into your hands — quickly.</p>
+          <div><div className="eyebrow">Process</div><h2 className="section-heading">From formulation to export-ready SDS</h2></div>
+          <p className="section-copy">A simple 4-step workflow to get compliant safety documentation into your hands — quickly.</p>
         </div>
         <div className="process-grid">
-          {steps.map(([number, title, text], index) => <div className="process-step reveal" ref={useReveal()} key={number} style={{ transitionDelay: `${index * 80}ms` }}>
-            <div className="step-num">{number}</div><h3>{title}</h3><p>{text}</p>
-          </div>)}
+          {steps.map(([number, title, text], index) => (
+            <div className="process-step reveal" ref={useReveal()} key={number} style={{ transitionDelay: `${index * 80}ms` }}>
+              <div className="step-num">{number}</div>
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -210,14 +309,18 @@ function WhyChemSds() {
     <section className="section why-section dark-section" id="why">
       <div className="container why-layout">
         <div className="why-intro reveal" ref={useReveal()}>
-           <div className="eyebrow">Why ChemSDS</div><h2 className="section-heading">Built for chemical exporters who value speed &amp; accuracy</h2>
-           <p className="section-copy">Reliable, market-specific documentation that helps your products move through review and into the real world.</p>
+          <div className="eyebrow">Why ChemSDS</div>
+          <h2 className="section-heading">Built for chemical exporters who value speed &amp; accuracy</h2>
+          <p className="section-copy">Reliable, market-specific documentation that helps your products move through review and into the real world.</p>
           <a className="button-mint" href="#contact" data-testid="link-why-contact">Talk to an expert <ArrowRight size={15} /></a>
         </div>
         <div className="benefits">
-          {benefits.map(([title, text], index) => <div className="benefit reveal" ref={useReveal()} key={title} style={{ transitionDelay: `${index * 90}ms` }}>
-            <div className="benefit-icon"><Check size={21} /></div><div><h3>{title}</h3><p>{text}</p></div>
-          </div>)}
+          {benefits.map(([title, text], index) => (
+            <div className="benefit reveal" ref={useReveal()} key={title} style={{ transitionDelay: `${index * 90}ms` }}>
+              <div className="benefit-icon"><Check size={21} /></div>
+              <div><h3>{title}</h3><p>{text}</p></div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -238,13 +341,17 @@ function Industries() {
     <section className="section industries" id="industries">
       <div className="container">
         <div className="section-head reveal" ref={useReveal()}>
-           <div><div className="eyebrow">Industries</div><h2 className="section-heading">Sectors we serve daily</h2></div>
-           <p className="section-copy">We help manufacturers, exporters and sellers across categories deliver compliant safety documentation for every market they ship to.</p>
+          <div><div className="eyebrow">Industries</div><h2 className="section-heading">Sectors we serve daily</h2></div>
+          <p className="section-copy">We help manufacturers, exporters and sellers across categories deliver compliant safety documentation for every market they ship to.</p>
         </div>
         <div className="industry-grid">
-          {industries.map(([title, text, Icon], index) => <article className="industry reveal" ref={useReveal()} key={title} style={{ transitionDelay: `${index * 45}ms` }} data-testid={`card-industry-${index}`}>
-            <div className="industry-mark"><Icon size={17} /></div><h3>{title}</h3><p>{text}</p>
-          </article>)}
+          {industries.map(([title, text, Icon], index) => (
+            <article className="industry reveal" ref={useReveal()} key={title} style={{ transitionDelay: `${index * 45}ms` }} data-testid={`card-industry-${index}`}>
+              <div className="industry-mark"><Icon size={17} /></div>
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>
@@ -255,7 +362,12 @@ function Testimonials() {
   return (
     <section className="section testimonials" id="reviews">
       <div className="container testimonial-layout">
-        <div className="reveal" ref={useReveal()}><div className="quote-mark">“</div><div className="eyebrow">Testimonials</div><h2 className="section-heading">Trusted by exporters worldwide</h2><p className="section-copy">From Amazon FBA sellers to fragrance houses — here’s what teams shipping to global markets say about working with ChemSDS.</p></div>
+        <div className="reveal" ref={useReveal()}>
+          <div className="quote-mark">“</div>
+          <div className="eyebrow">Testimonials</div>
+          <h2 className="section-heading">Trusted by exporters worldwide</h2>
+          <p className="section-copy">From Amazon FBA sellers to fragrance houses — here’s what teams shipping to global markets say about working with ChemSDS.</p>
+        </div>
         <div className="quote-card reveal" ref={useReveal()}>
           <blockquote>“We received our SDS in under 36 hours. Amazon FBA cleared our hazmat review on the first try. Absolutely reliable.”</blockquote>
           <div className="quote-author"><span className="avatar">RM</span><span><strong>Rahul Menon</strong><br />Export Manager • AgriChem Exports · India</span></div>
@@ -283,14 +395,21 @@ function FAQ() {
   return (
     <section className="section faq-section" id="faq">
       <div className="container faq-layout">
-        <div className="reveal" ref={useReveal()}><div className="eyebrow">Questions / 06</div><h2 className="section-heading">Clarity before you commit.</h2><p className="section-copy">Still unsure what your product needs? Send us a note and we will point you in the right direction.</p></div>
+        <div className="reveal" ref={useReveal()}>
+          <div className="eyebrow">Questions / 06</div>
+          <h2 className="section-heading">Clarity before you commit.</h2>
+          <p className="section-copy">Still unsure what your product needs? Send us a note and we will point you in the right direction.</p>
+        </div>
         <div className="faq-list reveal" ref={useReveal()}>
-          {faqs.map(([question, answer], index) => <div className="faq-item" key={question}>
-            <button className={`faq-question${open === index ? ' open' : ''}`} onClick={() => setOpen(open === index ? -1 : index)} aria-expanded={open === index} data-testid={`button-faq-${index}`}>
-              <span>{question}</span><ChevronDown size={18} />
-            </button>
-            <div className={`faq-answer${open === index ? ' open' : ''}`} aria-hidden={open !== index}>{answer}</div>
-          </div>)}
+          {faqs.map(([question, answer], index) => (
+            <div className="faq-item" key={question}>
+              <button className={`faq-question${open === index ? ' open' : ''}`} onClick={() => setOpen(open === index ? -1 : index)} aria-expanded={open === index} data-testid={`button-faq-${index}`}>
+                <span>{question}</span>
+                <ChevronDown size={18} />
+              </button>
+              <div className={`faq-answer${open === index ? ' open' : ''}`} aria-hidden={open !== index}>{answer}</div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -406,7 +525,9 @@ function Home() {
     <div className="site-shell">
       <Hero />
       <StandardsRibbon />
+      <TrustBadgesSection />
       <Services />
+      <GHSArchitectureSection />
       <Process />
       <WhyChemSds />
       <Industries />
