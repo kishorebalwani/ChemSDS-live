@@ -99,30 +99,30 @@ function Hero() {
       <Nav />
       <div className="container hero-inner">
         <div className="hero-copy reveal" ref={useReveal()}>
-          <div className="hero-kicker"><span className="kicker-dot" /> ✧&nbsp; Multi-country Compliance • Professional Formatting • WhatsApp Support</div>
+          <div className="hero-kicker"><span className="kicker-dot" /> ✧&nbsp; Customs &amp; Freight Clearance • Global Compliance • 24–48h Delivery</div>
           <h1>GHS-Compliant<br />SDS/MSDS <em>for India &amp;<br />Global Markets</em></h1>
-          <p className="hero-lede">SDS authored according to destination-market regulations: OSHA HazCom, EU REACH / CLP, WHMIS, and India Draft Rules. Delivered in 24–48 Hours.</p>
+          <p className="hero-lede">Fast-track 16-section SDS for Customs, Port &amp; Freight Clearance. Fully compliant with US OSHA HazCom, EU REACH, IATA Air Cargo &amp; IMDG Ocean Transport. Delivered in 24–48 Hours.</p>
           <div className="hero-features">
             <span><Check size={15} /> 16-Sections GHS<br />Format</span>
-            <span><Check size={15} /> GHS Classification<br />&amp; Pictograms</span>
+            <span><Check size={15} /> Customs &amp; Port<br />Clearance Ready</span>
             <span><Check size={15} /> Transport Data<br />(UN/IATA/IMDG)</span>
             <span><Check size={15} /> Free Revisions</span>
           </div>
           <div className="hero-actions">
             <a className="button-mint" href="#contact" data-testid="link-hero-start">Get a Quick Quote <ArrowRight size={16} /></a>
-            <a className="button-outline" href={WA_LINK} target="_blank" rel="noreferrer" data-testid="link-hero-services"><MessageCircle size={17} /> WhatsApp for Rush</a>
+            <a className="button-outline" href={WA_LINK} target="_blank" rel="noreferrer" data-testid="link-hero-services"><MessageCircle size={17} /> WhatsApp for Rush Orders</a>
           </div>
           <div className="hero-stats">
             <span><strong>24–48h</strong><small>TURNAROUND</small></span>
             <span><strong>50+</strong><small>COUNTRIES</small></span>
             <span><strong>16</strong><small>GHS SECTIONS</small></span>
-            <span><strong>100%</strong><small>COMPLIANCE</small></span>
+            <span><strong>100%</strong><small>CUSTOMS COMPLIANT</small></span>
           </div>
         </div>
         <DocumentPreview />
       </div>
       <div className="trust-strip">
-        <div className="container trust-items"><span>Regulation-ready</span><span>Human-reviewed</span><span>Global destinations</span><span>Confidential process</span></div>
+        <div className="container trust-items"><span>Customs-ready</span><span>Human-reviewed</span><span>Air &amp; Sea Freight</span><span>Strict NDA Protection</span></div>
       </div>
     </header>
   );
@@ -151,7 +151,7 @@ function TrustBadgesSection() {
     <section className="section" style={{ paddingTop: '28px', paddingBottom: '32px', borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
       <div className="container">
         <p style={{ textAlign: 'center', fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase', color: '#374151', marginBottom: '20px' }}>
-          Authored Strictly in Accordance With Global Regulatory Standards
+          Authored Strictly in Accordance With Global Regulatory &amp; Transport Standards
         </p>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }} className="reveal" ref={ref}>
           {trustCards.map((item) => (
@@ -180,7 +180,7 @@ const ghsSections = [
   { num: '11', title: 'Toxicological Information' },
   { num: '12', title: 'Ecological Information' },
   { num: '13', title: 'Disposal Considerations' },
-  { num: '14', title: 'Transport Info (UN/IATA)' },
+  { num: '14', title: 'Transport Info (UN/IATA/IMDG)' },
   { num: '15', title: 'Regulatory Information' },
   { num: '16', title: 'Other / Revision Info' },
 ];
@@ -227,12 +227,12 @@ function GHSArchitectureSection() {
 }
 
 const services = [
-  { number: '01', title: 'SDS/MSDS Preparation', text: 'Professionally authored Safety Data Sheets in 16-section GHS format, ready for global submission.', icon: FileCheck2 },
+  { number: '01', title: 'SDS/MSDS Preparation', text: 'Professionally authored Safety Data Sheets in 16-section GHS format, ready for global submission and customs release.', icon: FileCheck2 },
   { number: '02', title: 'GHS Classification', text: 'Accurate hazard classification, pictograms, and precautionary statements as per GHS Rev 10.', icon: ShieldCheck },
-  { number: '03', title: 'Chemical Labeling Support', text: 'Compliant labels with the right pictograms, signal words, and warnings for every market.', icon: FlaskConical },
+  { number: '03', title: 'Chemical Labeling Support', text: 'Compliant labels with the right pictograms, signal words, and warnings for every destination market.', icon: FlaskConical },
   { number: '04', title: 'Export & Regulatory Compliance', text: 'OSHA HazCom, EU REACH/CLP, WHMIS, and India Draft Rules — all covered.', icon: Globe2 },
-  { number: '05', title: 'SDS Revision & Updates', text: 'Keep documents current with formulation changes, new regulations, and market requirements.', icon: FileCheck2 },
-  { number: '06', title: 'Multilingual SDS', text: 'SDS in multiple languages tailored to destination country requirements.', icon: MessageCircle },
+  { number: '05', title: 'Air & Sea Freight Classification', text: 'Section 14 transport data compliant with IATA Dangerous Goods (Air) and IMDG Code (Ocean Cargo).', icon: FileCheck2 },
+  { number: '06', title: 'Multilingual SDS', text: 'SDS in multiple languages tailored to European, Middle Eastern, and Asian port requirements.', icon: MessageCircle },
 ];
 
 function Services() {
@@ -241,8 +241,8 @@ function Services() {
     <section className="section services" id="services">
       <div className="container">
         <div className="section-head reveal" ref={ref}>
-          <div><div className="eyebrow">Services</div><h2 className="section-heading">Everything you need for SDS compliance</h2></div>
-          <p className="section-copy">Professional SDS/MSDS authoring services for chemical products in compliance with global standards including GHS, OSHA &amp; REACH.</p>
+          <div><div className="eyebrow">Services</div><h2 className="section-heading">Everything you need for SDS &amp; Export compliance</h2></div>
+          <p className="section-copy">Professional SDS/MSDS authoring services for chemical products in compliance with global standards including GHS, OSHA, REACH, IATA &amp; IMDG.</p>
         </div>
         <div className="service-grid service-grid-six">
           {services.map((service, index) => <ServiceCard key={service.title} service={service} index={index} />)}
@@ -277,7 +277,7 @@ function PricingSection() {
             <h2 className="section-heading">GHS SDS Authoring &amp; Compliance Pricing</h2>
           </div>
           <p className="section-copy" style={{ margin: '0 auto' }}>
-            Fast, compliant 16-section Safety Data Sheets prepared for Indian manufacturers and global chemical exporters.
+            Fast, customs-cleared 16-section Safety Data Sheets prepared for Indian manufacturers, merchant traders, and global chemical exporters.
           </p>
         </div>
 
@@ -405,12 +405,12 @@ function Process() {
 }
 
 const benefits = [
-  ['Fast Turnaround', 'Delivered in 24–48 hours'],
-  ['Global Compliance', 'Expertise across regions'],
-  ['Affordable Pricing', 'Priced by product complexity'],
-  ['Responsive Support', 'WhatsApp & email replies'],
-  ['Reliable Documents', 'Export-ready formatting'],
-  ['Confidential Handling', 'NDA & data privacy'],
+  ['Port & Customs Clearance', 'Zero shipment holds at air cargo & sea customs'],
+  ['Fast Cargo Turnaround', 'Delivered in 24–48 hours for urgent export deadlines'],
+  ['Global Logistics Compliance', 'IATA (Air), IMDG (Ocean) & UN transport ready'],
+  ['Affordable Pricing', 'Transparent slab pricing with no hidden charges'],
+  ['Amazon Hazmat Review', 'FBA dangerous goods review clearance support'],
+  ['Confidential Handling', 'Complete formulation privacy protected under NDA'],
 ];
 
 function WhyChemSds() {
@@ -420,7 +420,7 @@ function WhyChemSds() {
         <div className="why-intro reveal" ref={useReveal()}>
           <div className="eyebrow">Why ChemSDS</div>
           <h2 className="section-heading">Built for chemical exporters who value speed &amp; accuracy</h2>
-          <p className="section-copy">Reliable, market-specific documentation that helps your products move through review and into the real world.</p>
+          <p className="section-copy">Reliable, market-specific documentation that prevents customs delays and helps your shipments clear ports smoothly worldwide.</p>
           <a className="button-mint" href="#contact" data-testid="link-why-contact">Talk to an expert <ArrowRight size={15} /></a>
         </div>
         <div className="benefits">
@@ -475,10 +475,10 @@ function Testimonials() {
           <div className="quote-mark">“</div>
           <div className="eyebrow">Testimonials</div>
           <h2 className="section-heading">Trusted by exporters worldwide</h2>
-          <p className="section-copy">From Amazon FBA sellers to fragrance houses — here’s what teams shipping to global markets say about working with ChemSDS.</p>
+          <p className="section-copy">From Amazon FBA sellers to global chemical exporters — here’s what teams shipping to international destinations say about working with ChemSDS.</p>
         </div>
         <div className="quote-card reveal" ref={useReveal()}>
-          <blockquote>“We received our SDS in under 36 hours. Amazon FBA cleared our hazmat review on the first try. Absolutely reliable.”</blockquote>
+          <blockquote>“Our chemical consignment was held at customs due to missing GHS Section 14 transport data. ChemSDS delivered an updated, compliant SDS in less than 24 hours, and the shipment cleared immediately.”</blockquote>
           <div className="quote-author"><span className="avatar">RM</span><span><strong>Rahul Menon</strong><br />Export Manager • AgriChem Exports · India</span></div>
           <div className="review-stats"><span><strong>4.9/5</strong><small>Average rating</small></span><span><strong>50+</strong><small>Countries served</small></span><span><strong>98%</strong><small>On-time delivery</small></span></div>
         </div>
@@ -488,15 +488,14 @@ function Testimonials() {
 }
 
 const faqs = [
-  ['What is an SDS/MSDS?', 'A Safety Data Sheet (SDS), formerly known as an MSDS, communicates the hazards, handling, storage, and emergency information for a chemical product.'],
-  ['Which standards do you support?', 'We support OSHA HazCom, EU REACH / CLP, WHMIS, India Draft Rules, UK REACH, and GHS requirements for global markets.'],
-  ['What details are required for SDS preparation?', 'Share your product name, composition, intended use, destination country, and any existing label or SDS.'],
-  ['How long does SDS preparation take?', 'Most documents are delivered in 24–48 hours after we receive complete product and formulation details.'],
-  ['Do you support Amazon FBA SDS requirements?', 'Yes. We prepare export-ready documentation for dangerous goods and Hazmat review.'],
-  ['Do you provide multilingual SDS?', 'Yes. SDS can be tailored to multiple languages and destination country requirements.'],
-  ['Do you support 24-hour rush orders?', 'Yes. Message us on WhatsApp for expedited orders and current availability.'],
-  ['What details do I need to provide?', 'Product name, ingredients or composition, country of use/export, and number of products are a helpful starting point.'],
-  ['Will this SDS work for Amazon FBA Dangerous Goods / Hazmat review?', 'We format documents for marketplace and destination-market requirements, including Amazon FBA Hazmat review.'],
+  ['Do you help if my shipment is held at customs or port for a missing SDS?', 'Yes. We prioritize urgent export consignments and offer 24-hour express authoring to help release shipments held by airlines, shipping lines, freight forwarders, or port customs authorities.'],
+  ['Is your SDS accepted by international airlines and shipping lines?', 'Yes. Every SDS includes comprehensive Section 14 transport data (UN Number, Proper Shipping Name, Class, Packing Group, and Marine Pollutant info) compliant with IATA-DGR (Air) and IMDG Code (Ocean).'],
+  ['What is an SDS/MSDS?', 'A Safety Data Sheet (SDS), formerly known as an MSDS, communicates the hazards, handling, storage, transport, and emergency measures for a chemical product.'],
+  ['Which international standards do you support?', 'We support US OSHA HazCom 2012, EU REACH (Regulation 2020/878) / CLP, WHMIS 2015, India Draft Chemicals Rules, UK REACH, and UN GHS Rev. 10.'],
+  ['What details are required for SDS preparation?', 'Share your product name, ingredients or chemical composition, intended application, target country of export, and any existing laboratory test or TDS.'],
+  ['How long does SDS preparation take?', 'Standard orders are delivered in 24–48 hours. Expedited rush authoring is available for time-sensitive port and air cargo deadlines.'],
+  ['Will this SDS work for Amazon FBA Dangerous Goods / Hazmat review?', 'Yes. We specifically author documents to satisfy Amazon Hazmat FBA requirements, ensuring smooth product clearance.'],
+  ['Do you provide multilingual SDS?', 'Yes. We author SDS in destination-specific languages including English, Spanish, German, French, and Arabic.'],
 ];
 
 function FAQ() {
@@ -505,9 +504,9 @@ function FAQ() {
     <section className="section faq-section" id="faq">
       <div className="container faq-layout">
         <div className="reveal" ref={useReveal()}>
-          <div className="eyebrow">Questions / 06</div>
+          <div className="eyebrow">Questions / 08</div>
           <h2 className="section-heading">Clarity before you commit.</h2>
-          <p className="section-copy">Still unsure what your product needs? Send us a note and we will point you in the right direction.</p>
+          <p className="section-copy">Have questions about export clearance, compliance standards, or turnaround times? Everything you need to know is right here.</p>
         </div>
         <div className="faq-list reveal" ref={useReveal()}>
           {faqs.map(([question, answer], index) => (
@@ -599,7 +598,7 @@ function Contact() {
           </div>
           <div className="field">
             <label htmlFor="message">Additional details</label>
-            <textarea id="message" name="message" placeholder="Tell us about your formulation or deadline." data-testid="input-message" />
+            <textarea id="message" name="message" placeholder="Tell us about your formulation, port deadline, or urgency." data-testid="input-message" />
           </div>
           <div className="submit-row">
             {sent ? <span className="form-status" data-testid="status-form-sent">Redirecting to WhatsApp...</span> : <span className="form-status">Instant reply on WhatsApp.</span>}
