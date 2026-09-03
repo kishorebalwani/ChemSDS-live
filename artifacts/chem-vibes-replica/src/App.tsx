@@ -166,36 +166,6 @@ function TrustBadgesSection() {
   );
 }
 
-function VideoExplainerSection() {
-  const ref = useReveal();
-  return (
-    <section className="section" style={{ background: '#0a101d', color: '#ffffff', paddingTop: '55px', paddingBottom: '60px' }}>
-      <div className="container">
-        <div className="reveal" ref={ref} style={{ maxWidth: '850px', margin: '0 auto', textAlign: 'center' }}>
-          <div style={{ display: 'inline-block', background: 'rgba(5, 150, 105, 0.15)', border: '1px solid rgba(5, 150, 105, 0.4)', color: '#34d399', padding: '5px 14px', borderRadius: '100px', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.05em', textTransform: 'uppercase', marginBottom: '14px' }}>
-            Explainer Video • 50 Seconds
-          </div>
-          <h2 style={{ fontSize: '1.85rem', fontWeight: 800, color: '#ffffff', marginBottom: '10px', letterSpacing: '-0.02em' }}>
-            How We Resolve Hazmat Reviews &amp; Author 16-Section GHS SDS
-          </h2>
-          <p style={{ fontSize: '0.95rem', color: '#94a3b8', lineHeight: 1.6, marginBottom: '26px' }}>
-            A quick overview of our certification protocols, UN GHS standards, and fast 24–48h delivery process for Indian exporters.
-          </p>
-          <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: '14px', boxShadow: '0 20px 40px rgba(0, 0, 0, 0.6)', border: '1px solid rgba(255, 255, 255, 0.1)', background: '#000000' }}>
-            <iframe
-              style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 0 }}
-              src="https://www.youtube-nocookie.com/embed/cFLFqt37G6U?rel=0&modestbranding=1"
-              title="ChemSDS Amazon FBA Hazmat & SDS Explainer"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 const ghsSections = [
   { num: '01', title: 'Identification & Supplier' },
   { num: '02', title: 'Hazard(s) Identification' },
@@ -670,7 +640,6 @@ function Home() {
       <Hero />
       <StandardsRibbon />
       <TrustBadgesSection />
-      <VideoExplainerSection />
       <Services />
       <GHSArchitectureSection />
       <PricingSection />
