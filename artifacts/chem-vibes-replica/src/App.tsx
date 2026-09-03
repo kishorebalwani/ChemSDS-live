@@ -9,7 +9,7 @@ import { Route, Switch, Router as WouterRouter } from 'wouter';
 
 const queryClient = new QueryClient();
 
-const WA_LINK = "https://wa.me/919183519390?text=Hi%2C%20I%20need%20SDS%2FMSDS%20for%20my%20product(s).%0A%0APlease%20find%20the%20details%20below%3A%0A%0A1.%20Product%20Name%3A%20%0A2.%20Language%20Required%3A%20%0A3.%20Country%20of%20Use%2FExport%3A%20%0A4.%20Number%20of%20Products%3A%20%0A%0APlease%20share%20pricing%20and%20turnaround%20time.";
+const WA_LINK = "https://wa.me/919183519390?text=Hi%2C%20I%20need%20a%2016-section%20GHS%20SDS%2FMSDS%20prepared%20for%20my%20product(s).%0A%0A1.%20Product%20Name%3A%20%0A2.%20Target%20Market%2FExport%3A%20%0A3.%20Language%20Required%3A%20%0A4.%20Number%20of%20Products%3A%20%0A%0APlease%20share%20the%20quotation%20and%20turnaround%20time.";
 const WA_SAMPLE_LINK = "https://wa.me/919183519390?text=Hi%2C%20I%20would%20like%20to%20review%20a%20sample%2016-section%20GHS%20SDS%20document.";
 
 function useReveal<T extends HTMLElement = HTMLDivElement>() {
@@ -539,7 +539,7 @@ function Contact() {
     const productsCount = formData.get('products') || '1';
     const message = formData.get('message') || 'None';
 
-    const text = `Hi, I need SDS/MSDS for my product(s).%0A%0APlease find the details below:%0A• Client Name: ${encodeURIComponent(String(clientName))}%0A• Contact / Company: ${encodeURIComponent(String(clientContact))}%0A• Product Name: ${encodeURIComponent(String(productName))}%0A• Language Required: ${encodeURIComponent(String(language))}%0A• Country of Use/Export: ${encodeURIComponent(String(country))}%0A• Number of Products: ${encodeURIComponent(String(productsCount))}%0A• Additional Details: ${encodeURIComponent(String(message))}%0A%0APlease share pricing and turnaround time.`;
+    const text = `Hi, I need a 16-section GHS SDS/MSDS prepared for my product(s).%0A%0A• Client / Company: ${encodeURIComponent(String(clientName))}%0A• Contact: ${encodeURIComponent(String(clientContact))}%0A• Product Name: ${encodeURIComponent(String(productName))}%0A• Country of Use/Export: ${encodeURIComponent(String(country))}%0A• Language: ${encodeURIComponent(String(language))}%0A• Number of Products: ${encodeURIComponent(String(productsCount))}%0A• Additional Notes: ${encodeURIComponent(String(message))}%0A%0APlease share the quotation and turnaround time.`;
 
     setSent(true);
     event.currentTarget.reset();
