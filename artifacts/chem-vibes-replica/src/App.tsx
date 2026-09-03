@@ -626,6 +626,7 @@ function Footer() {
           <a href="/guides/how-to-get-msds-certificate-in-india.html">Get MSDS Certificate (India)</a>
           <a href="/guides/customs-clearance-msds-india.html">Customs Clearance MSDS</a>
           <a href="/guides/ghs-sds-authoring-services-india.html">GHS Authoring Services</a>
+          <a href="/guides/non-dangerous-goods-ndg-declaration-air-cargo.html">NDG Air Cargo Format</a>
           <a href="/guides/sds-for-chemical-exports-from-india.html">Export SDS Guide</a>
         </div>
       </div>
