@@ -623,6 +623,7 @@ function Footer() {
           <a href="#pricing">Pricing</a>
           <a href="#industries" data-testid="link-footer-industries">Industries</a>
           <a href="#contact" data-testid="link-footer-contact">Contact</a>
+          <a href="/guides/sds-for-chemical-exports-from-india.html">Export SDS Guide</a>
         </div>
       </div>
     </footer>
