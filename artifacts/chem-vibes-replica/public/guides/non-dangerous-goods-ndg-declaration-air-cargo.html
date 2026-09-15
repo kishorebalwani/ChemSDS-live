@@ -3,273 +3,319 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Non-Dangerous Goods (NDG) Declaration Format for Air Cargo India | ChemSDS</title>
-  <meta name="description" content="Download Non-Dangerous Goods (NDG) declaration format for air cargo in India. Understand IATA requirements, mandatory SDS Section 14 correlation, and airline clearance." />
-  <meta name="keywords" content="ndg declaration format air cargo, non dangerous goods declaration india, non hazardous chemical declaration for customs, dhl fedex ndg format, airline cargo msds india" />
+  <title>Non-Dangerous Goods (NDG) Declaration Format & Letter for Air Cargo & Courier | ChemSDS</title>
+  <meta name="description" content="Download Non-Hazardous Declaration Letter Format for Courier (FedEx, DHL, Blue Dart) & IATA Air Cargo. Get certified NDG certificates and 16-section SDS in 24 hours." />
+  <meta name="keywords" content="non hazardous declaration letter for courier, non dg declaration format, certificate of non dangerous goods, non hazardous declaration, non hazardous certificate air cargo, fedex non hazardous declaration, dhl ndg certificate" />
   <link rel="canonical" href="https://www.chemsds.in/guides/non-dangerous-goods-ndg-declaration-air-cargo.html" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Non-Dangerous Goods (NDG) Declaration Format for Air Cargo India" />
-  <meta property="og:description" content="Guide and format for Non-Dangerous Goods (NDG) declarations required by airlines and freight forwarders for air cargo from India." />
-  <meta property="og:url" content="https://www.chemsds.in/guides/non-dangerous-goods-ndg-declaration-air-cargo.html" />
-  <meta property="og:type" content="article" />
-
-  <!-- FAQ Schema for Rich Snippets -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is a Non-Dangerous Goods (NDG) declaration for air cargo?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "An NDG declaration is a formal statement issued on the shipper's company letterhead certifying that the chemical consignment does not fall under any of the 9 UN Dangerous Goods classes according to current IATA Dangerous Goods Regulations (DGR)."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can an NDG declaration be submitted without an SDS/MSDS?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Airlines (including Air India Cargo, IndiGo CarGo, Emirates, DHL, FedEx) require a compliant 16-section GHS SDS alongside the NDG letter. Section 14 of the SDS must explicitly state 'Not Regulated as Dangerous Goods for Transport'."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What parameters are checked in the SDS for air cargo NDG approval?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Cargo acceptance officers specifically verify the Flash Point in Section 9 (must be above 60°C for non-flammable liquid declaration), absence of toxic or corrosive classifications in Sections 11 and 8, and Section 14 IATA/ICAO transport blocks."
-        }
-      }
-    ]
-  }
-  </script>
-
   <style>
     :root {
-      --primary: #059669;
-      --primary-dark: #047857;
-      --text-dark: #111827;
-      --text-muted: #4b5563;
-      --bg-light: #f8fafc;
-      --border: #e2e8f0;
+      --bg: #030712;
+      --card-bg: #0f172a;
+      --border: #1e293b;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --accent: #10b981;
+      --accent-hover: #059669;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-      line-height: 1.75;
-      color: var(--text-dark);
-      background-color: #ffffff;
-      padding: 0 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 0;
     }
     header {
       border-bottom: 1px solid var(--border);
-      padding: 16px 0;
-      margin-bottom: 40px;
-    }
-    .nav-container {
-      max-width: 840px;
-      margin: 0 auto;
+      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background: rgba(3, 7, 18, 0.8);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 50;
     }
-    .brand {
+    .logo {
       font-weight: 800;
-      font-size: 1.25rem;
-      color: var(--text-dark);
+      color: #fff;
       text-decoration: none;
-    }
-    .brand span { color: var(--primary); }
-    .container {
-      max-width: 840px;
-      margin: 0 auto;
-      padding-bottom: 80px;
-    }
-    h1 {
-      font-size: 2.25rem;
-      line-height: 1.25;
-      font-weight: 800;
-      color: var(--text-dark);
-      margin-bottom: 18px;
-    }
-    h2 {
-      font-size: 1.55rem;
-      font-weight: 700;
-      margin: 38px 0 14px 0;
-      color: var(--text-dark);
-      border-bottom: 2px solid #f1f5f9;
-      padding-bottom: 8px;
-    }
-    h3 {
-      font-size: 1.2rem;
-      font-weight: 600;
-      margin: 22px 0 10px 0;
-      color: #1f2937;
-    }
-    p { margin-bottom: 18px; color: #374151; font-size: 1.05rem; }
-    ul, ol { margin: 0 0 22px 24px; color: #374151; font-size: 1.05rem; }
-    li { margin-bottom: 10px; }
-    .callout-box {
-      background: #eff6ff;
-      border: 1px solid #bfdbfe;
-      border-left: 5px solid #2563eb;
-      padding: 22px;
-      border-radius: 8px;
-      margin: 28px 0;
-    }
-    .callout-box h3 { margin-top: 0; color: #1e40af; }
-    .format-block {
-      background: #f1f5f9;
-      border: 1px dashed #94a3b8;
-      border-radius: 8px;
-      padding: 24px;
-      font-family: monospace;
-      font-size: 0.95rem;
-      color: #0f172a;
-      white-space: pre-wrap;
-      line-height: 1.6;
-      margin: 24px 0;
-    }
-    .cta-button {
-      display: inline-flex;
+      font-size: 1.25rem;
+      display: flex;
       align-items: center;
       gap: 8px;
-      background: var(--primary);
-      color: white;
-      padding: 12px 24px;
+    }
+    .logo span { color: var(--accent); }
+    .header-cta {
+      background: var(--accent);
+      color: #030712;
+      font-weight: 700;
+      padding: 0.5rem 1rem;
       border-radius: 8px;
       text-decoration: none;
-      font-weight: 600;
-      transition: background 0.2s ease;
+      font-size: 0.9rem;
     }
-    .cta-button:hover { background: var(--primary-dark); }
-    .price-box {
-      background: #ffffff;
-      border: 2px solid var(--primary);
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      color: var(--accent);
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      margin-bottom: 1.25rem;
+    }
+    h1 {
+      font-size: 2.3rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.25;
+      margin-bottom: 1rem;
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+    }
+    .alert-box {
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 1.5rem;
       border-radius: 12px;
-      padding: 26px;
-      margin: 32px 0;
-      text-align: center;
-      box-shadow: 0 4px 14px rgba(5,150,105,0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2.5rem;
     }
-    .faq-block {
-      background: var(--bg-light);
+    @media (min-width: 640px) {
+      .alert-box { flex-direction: row; align-items: center; justify-content: space-between; }
+    }
+    .alert-title { font-weight: 700; color: #fff; margin-bottom: 4px; }
+    .alert-desc { font-size: 0.9rem; color: #cbd5e1; }
+    .btn-wa {
+      background: var(--accent);
+      color: #030712;
+      text-decoration: none;
+      padding: 0.75rem 1.25rem;
       border-radius: 8px;
-      padding: 18px 20px;
-      margin-bottom: 14px;
-      border: 1px solid var(--border);
+      font-weight: 700;
+      white-space: nowrap;
+      display: inline-block;
+      text-align: center;
     }
-    .faq-block h3 { margin-top: 0; color: #111827; }
+    section {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    h2 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+    p { margin-bottom: 1rem; color: #cbd5e1; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+    th, td {
+      border: 1px solid var(--border);
+      padding: 0.85rem;
+      text-align: left;
+    }
+    th {
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      font-weight: 700;
+    }
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      color: #cbd5e1;
+    }
+    li { margin-bottom: 0.6rem; }
+    .code-template {
+      background: #020617;
+      border: 1px solid #334155;
+      border-radius: 10px;
+      padding: 1.5rem;
+      font-family: monospace;
+      font-size: 0.88rem;
+      color: #cbd5e1;
+      white-space: pre-wrap;
+      line-height: 1.6;
+      margin-top: 1.2rem;
+      overflow-x: auto;
+    }
+    .big-cta {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(15, 23, 42, 0.9));
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      padding: 2.5rem;
+      border-radius: 16px;
+      text-align: center;
+      margin-top: 3rem;
+    }
+    .big-cta h3 {
+      font-size: 1.75rem;
+      color: #fff;
+      font-weight: 800;
+      margin-bottom: 0.8rem;
+    }
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .btn-phone {
+      background: #1e293b;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      border: 1px solid #334155;
+    }
     footer {
       border-top: 1px solid var(--border);
-      padding: 30px 0;
+      padding: 2rem;
       text-align: center;
-      font-size: 0.9rem;
       color: var(--text-muted);
-      margin-top: 60px;
+      font-size: 0.85rem;
+      margin-top: 3rem;
     }
-    footer a { color: var(--primary); text-decoration: none; }
+    footer a { color: var(--accent); text-decoration: none; }
   </style>
 </head>
 <body>
 
   <header>
-    <div class="nav-container">
-      <a href="/" class="brand">Chem<span>SDS</span></a>
-      <a href="https://wa.me/919183519390?text=Hi%2C%20I%20need%20an%20NDG%20Declaration%20and%2016-section%20SDS%20prepared%20for%20air%20cargo.%20Please%20share%20quotation." class="cta-button" style="padding: 8px 16px; font-size: 0.85rem;">Request NDG &amp; SDS</a>
-    </div>
+    <a href="/" class="logo"><span>⚗</span> ChemSDS</a>
+    <a href="https://wa.me/919183519390?text=Hi%2C%20I%20need%20an%20NDG%20Declaration%20and%20SDS%20for%20my%20shipment." class="header-cta">Get NDG / SDS Quote</a>
   </header>
 
   <main class="container">
-    <h1>Non-Dangerous Goods (NDG) Declaration Format for Air Cargo India</h1>
+    <span class="badge">Air Cargo & Courier Compliance</span>
+    <h1>Non-Dangerous Goods (NDG) Declaration Format for Courier & Air Cargo</h1>
+    <p class="subtitle">Complete guide, legal requirements, and ready-to-use Non-Hazardous Declaration Letter Format for courier consignments (FedEx, DHL, Blue Dart, Aramex) and international air freight.</p>
 
-    <div class="callout-box">
-      <h3>Air Freight Compliance Mandatory Notice</h3>
-      <p style="margin-bottom: 0;">Whenever shipping liquids, chemical powders, herbal products, or cosmetics by air (via DHL, FedEx, IndiGo CarGo, Air India Cargo, etc.), airlines demand an <strong>NDG Declaration Letter</strong> accompanied by a validated <strong>16-section GHS Safety Data Sheet (SDS)</strong> showing 'Not Regulated' under Section 14.</p>
+    <!-- Urgent Alert CTA -->
+    <div class="alert-box">
+      <div>
+        <div class="alert-title">Courier or Airline Holding Your Consignment?</div>
+        <div class="alert-desc">Get an expert-verified Non-Dangerous Goods Declaration Letter and compliant 16-section SDS delivered in 24 hours.</div>
+      </div>
+      <a href="https://wa.me/919183519390?text=Hi%2C%20I%20need%20urgent%20NDG%20Letter%20and%20SDS%20support%20for%20my%20courier%20shipment." class="btn-wa">Contact Regulatory Specialist</a>
     </div>
 
-    <p>For Indian exporters, air cargo is the fastest shipping route, but it carries the strictest safety audits. Airlines follow IATA (International Air Transport Association) Dangerous Goods Regulations. If you declare a chemical product as non-hazardous without matching technical proof, your consignment will be rejected at the airport cargo terminal.</p>
+    <!-- Section 1 -->
+    <section>
+      <h2>What is a Non-Dangerous Goods (NDG) Declaration?</h2>
+      <p>A <strong>Non-Dangerous Goods (NDG) Declaration Letter</strong> (also called a <strong>Non-Hazardous Certificate</strong>) is a legally binding statement issued on the shipper's company letterhead. It certifies that a cargo or parcel consignment does not contain substances classified under <strong>IATA Dangerous Goods Regulations (DGR)</strong> or the <strong>IMDG Code</strong>.</p>
+      <p>International courier services such as <strong>FedEx, DHL Express, Blue Dart, UPS, and Aramex</strong> routinely demand an NDG letter along with a matching 16-section Safety Data Sheet (SDS) before accepting liquids, powders, cosmetics, herbal extracts, essential oils, or battery items.</p>
+    </section>
 
-    <h2>Standard NDG Declaration Format (Sample Template)</h2>
-    <p>You can use this standard format on your company letterhead, stamped and signed by an authorized signatory:</p>
+    <!-- Section 2: Format Template -->
+    <section>
+      <h2>Non-Hazardous Declaration Letter Format for Courier (FedEx, DHL, Blue Dart)</h2>
+      <p>Below is the standard, airline-approved format required by courier customs and safety officers. Print this declaration on your <strong>Official Company Letterhead</strong>:</p>
 
-    <div class="format-block">[ON COMPANY LETTERHEAD]
+      <div class="code-template">
+TO WHOMSOEVER IT MAY CONCERN
 
-Date: [DD/MM/YYYY]
+Date: [Insert Date]
+Airway Bill (AWB) / Tracking No: [Insert Courier AWB Number]
+Invoice No & Date: [Insert Commercial Invoice Number]
+Destination Country: [Insert Destination Country]
 
-TO WHOMSOEVER IT MAY CONCERN / AIRLINE CARGO ACCEPTANCE DESK
+DECLARATION OF NON-DANGEROUS / NON-HAZARDOUS GOODS
 
-Subject: NON-DANGEROUS GOODS DECLARATION FOR AIR CARGO
+We, [Insert Shipper Company Name], having our registered facility at [Insert Registered Address], hereby declare that the shipment handed over to [FedEx / DHL / Blue Dart / Airline Name] under the aforementioned Airway Bill contains the following product(s):
 
-AWB / Booking No.: [Air Waybill Number or Reference]
-Product Trade Name: [Full Product Name]
-Chemical / Botanical Identity: [Active Ingredient / Chemical Name]
-Quantity & Packaging: [e.g., 25 Kg Fiber Drums / HDPE Cans]
+• Product Commercial Name: [Insert Exact Product Name]
+• Technical / Chemical Name: [Insert Composition or INCI Name]
+• Total Quantity / Packages: [e.g., 5 Bottles x 1 Liter / 2 Boxes]
 
-This is to certify that the consignment mentioned above does not fall under any of the 9 Dangerous Goods classes as defined by current IATA Dangerous Goods Regulations (DGR) and ICAO Technical Instructions.
+We certify that the above-mentioned consignment:
+1. Is NOT classified as Dangerous Goods under the current edition of the IATA Dangerous Goods Regulations (DGR) Special Provisions.
+2. Does NOT fall under any of the 9 IATA / UN Hazard Classes (Not Explosive, Not Flammable, Not Toxic, Not Corrosive, Not Radioactive, Not Magnetic).
+3. Has a Flash Point above 60°C (140°F) and is completely safe for passenger and cargo aircraft transportation.
+4. Is non-hazardous, non-toxic, non-infectious, and non-prohibited for domestic and international courier carriage.
+5. In the event of packaging leakage, it will not cause injury to cargo handlers, aircraft structure, or other consignments.
 
-We hereby declare that the material:
-1. Is NOT explosive, flammable, toxic, corrosive, oxidising, or radioactive.
-2. Contains NO self-reactive substances or organic peroxides.
-3. Flash Point (Closed Cup) is [e.g., > 100°C], which is well above the 60°C threshold for Class 3 flammable liquids.
-4. Does NOT emit flammable or toxic gases when in contact with water or air.
+This declaration is issued in conjunction with Section 14 (Transport Information) of our GHS-compliant 16-Section Safety Data Sheet (SDS) enclosed herewith.
 
-The cargo is completely safe for transport on passenger and cargo aircraft. Attached herewith is the 16-Section GHS Safety Data Sheet (SDS) prepared in accordance with UN GHS Rev. 10 standards.
+Authorized Signatory:
+Name: [Signatory Name]
+Designation: [e.g., Export Manager / Quality Head]
+Company Seal & Stamp:
+Contact Phone & Email: [Insert Contact Details]
+      </div>
+    </section>
 
-For [Your Company Name]
+    <!-- Section 3: Why Couriers Reject -->
+    <section>
+      <h2>Top Reasons Couriers Hold or Reject NDG Letters</h2>
+      <ul>
+        <li><strong>No Matching SDS Attached:</strong> Courier safety desks (like DHL DG desk or FedEx DG Hotline) will reject an NDG declaration if it is not supported by a valid 16-section GHS Safety Data Sheet.</li>
+        <li><strong>Missing AWB or Invoice Number:</strong> The letter must explicitly link to the physical package tracking or Airway Bill (AWB) number.</li>
+        <li><strong>Conflict in Section 14 of SDS:</strong> If your SDS Section 14 shows a UN number (like UN 1993 or UN 1169) but your letter claims "Non-Dangerous", the parcel is flagged immediately for misdeclaration.</li>
+        <li><strong>Not on Official Company Letterhead:</strong> Plain printouts without company stamp, registration details, and authorized signature are rejected by port customs.</li>
+      </ul>
+    </section>
 
-Authorized Signatory
-Name:
-Designation:
-Contact Number:
-Company Seal / Stamp:</div>
+    <!-- Section 4: Comparison Table -->
+    <section>
+      <h2>NDG Declaration vs. 16-Section SDS: Do You Need Both?</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Document</th>
+            <th>Primary Purpose</th>
+            <th>Issuing Authority</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Non-Dangerous Goods Letter</strong></td>
+            <td>Shipper's self-certification declaring the consignment safe for courier & express air flight.</td>
+            <td>Shipper / Exporter on Official Letterhead.</td>
+          </tr>
+          <tr>
+            <td><strong>16-Section GHS SDS</strong></td>
+            <td>Technical regulatory proof containing composition, toxicology, flash point, and Section 14 IATA classification.</td>
+            <td>Qualified Regulatory / Chemical Expert (ChemSDS).</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-    <h2>Why Airlines Reject NDG Declarations</h2>
-    <p>A signed letter alone is rarely enough. Airline DGR screeners cross-examine the letter with your product's Safety Data Sheet:</p>
-    <ul>
-      <li><strong>Mismatch in Section 9 Flash Point:</strong> If an essential oil or solvent is declared non-hazardous, but Section 9 states a flash point below 60°C, the declaration is rejected immediately as Class 3 Flammable.</li>
-      <li><strong>Blank or Ambiguous Section 14:</strong> Stating merely "Safe" instead of "Not Regulated as Dangerous Goods under IATA-DGR / ICAO" leads to shipment holds.</li>
-      <li><strong>No CAS Numbers Disclosed:</strong> Customs and airline security officers require verifiable CAS numbers to confirm the chemical is not on restricted precursor lists.</li>
-    </ul>
-
-    <div class="price-box">
-      <h3 style="font-size: 1.4rem; color: #111827; margin-bottom: 8px;">Need Air Cargo Clearance SDS &amp; NDG Guidance?</h3>
-      <p style="color: #4b5563; font-size: 1rem; margin-bottom: 18px;">
-        Single Chemicals / Oils: <strong>₹4,499 / $55</strong> • Blends: <strong>₹8,499 / $105</strong><br />
-        Delivered in 24–48 Hours with IATA Section 14 Verified.
-      </p>
-      <a href="https://wa.me/919183519390?text=Hi%2C%20I%20need%20a%2016-section%20GHS%20SDS%20prepared%20for%20air%20cargo%20clearance.%20Please%20share%20details%20and%20pricing." class="cta-button">Order Air Cargo SDS via WhatsApp</a>
-    </div>
-
-    <h2>Frequently Asked Questions (FAQ)</h2>
-
-    <div class="faq-block">
-      <h3>Is an NDG certificate required for courier shipments (FedEx/DHL)?</h3>
-      <p>Yes. International couriers like FedEx, DHL Express, and Aramex mandate an NDG letter and compliant SDS for all liquids, creams, powders, and chemicals before booking pickup.</p>
-    </div>
-
-    <div class="faq-block">
-      <h3>Can ChemSDS verify if our product qualifies as Non-Dangerous Goods?</h3>
-      <p>Yes. We evaluate your formulation, flash point, and toxicology data against UN Model Regulations and IATA classification tables to determine accurate transport status.</p>
-    </div>
-
-    <div style="margin-top: 40px; text-align: center;">
-      <a href="/" style="color: var(--primary); text-decoration: none; font-weight: 600;">← ChemSDS Home</a>
-      <span style="margin: 0 10px; color: #9ca3af;">•</span>
-      <a href="/guides/customs-clearance-msds-india.html" style="color: var(--primary); text-decoration: none; font-weight: 600;">Customs Clearance MSDS →</a>
-      <span style="margin: 0 10px; color: #9ca3af;">•</span>
-      <a href="/guides/how-to-get-msds-certificate-in-india.html" style="color: var(--primary); text-decoration: none; font-weight: 600;">Get MSDS in India →</a>
+    <!-- Big CTA Box -->
+    <div class="big-cta">
+      <h3>Need Express NDG Letter & 16-Section SDS?</h3>
+      <p>Avoid courier shipment rejections and delays. ChemSDS authors export-ready, airline-approved 16-section SDS and custom NDG declarations within <strong>24 to 48 hours</strong>.</p>
+      <div class="cta-buttons">
+        <a href="https://wa.me/919183519390?text=Hi%2C%20I%20need%20NDG%20Declaration%20and%20SDS%20Authoring%20support." class="btn-wa">Chat on WhatsApp for Fast Clearance</a>
+        <a href="tel:+919183519390" class="btn-phone">Call: +91-9183519390</a>
+      </div>
     </div>
   </main>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2026 ChemSDS. Air Freight &amp; Maritime Transport Compliance Services for India.</p>
-    </div>
+    <p>&copy; 2026 ChemSDS Solutions. All rights reserved. | <a href="/">Home</a> | <a href="/guides/customs-clearance-msds-india.html">Customs Clearance MSDS</a> | <a href="/guides/amazon-hazmat-sds-fba-clearance.html">Amazon Hazmat Guide</a></p>
   </footer>
 
 </body>
