@@ -436,13 +436,27 @@ function WhyChemSds() {
   );
 }
 
-const industries: Array<[string, string, LucideIcon]> = [
-  ['Specialty Chemicals & Solvents', 'Safety documentation for industrial chemical products.', FlaskConical],
-  ['Cosmetics & Personal Care Ingredients', 'Clear compliance for formulations, ingredients, and finished goods.', Sparkles],
-  ['Agrochemicals, Fertilizers & Pesticides', 'Market-ready information for agricultural inputs.', Globe2],
-  ['Paints, Coatings & Resins', 'Hazard communication that matches every product label.', Zap],
-  ['E-Commerce & Amazon FBA Exporters', 'Get your products through review and into the warehouse.', ShieldCheck],
-  ['Battery & Automotive Industry', 'Reliable documents for high-specification products and supply chains.', FileCheck2],
+type IndustryItem = {
+  title: string;
+  text: string;
+  icon: LucideIcon;
+  linkText?: string;
+  linkHref?: string;
+};
+
+const industries: IndustryItem[] = [
+  { title: 'Specialty Chemicals & Solvents', text: 'Safety documentation for industrial chemical products.', icon: FlaskConical },
+  { title: 'Cosmetics & Personal Care Ingredients', text: 'Clear compliance for formulations, ingredients, and finished goods.', icon: Sparkles },
+  { title: 'Agrochemicals, Fertilizers & Pesticides', text: 'Market-ready information for agricultural inputs.', icon: Globe2 },
+  { title: 'Paints, Coatings & Resins', text: 'Hazard communication that matches every product label.', icon: Zap },
+  { 
+    title: 'E-Commerce & Amazon FBA Exporters', 
+    text: 'Get products through Dangerous Goods review into the warehouse quickly.', 
+    icon: ShieldCheck,
+    linkText: 'View Amazon Hazmat Guide →',
+    linkHref: '/guides/amazon-hazmat-sds-fba-clearance.html'
+  },
+  { title: 'Battery & Automotive Industry', text: 'Reliable documents for high-specification products and supply chains.', icon: FileCheck2 },
 ];
 
 function Industries() {
@@ -454,13 +468,26 @@ function Industries() {
           <p className="section-copy">We help manufacturers, exporters and sellers across categories deliver compliant safety documentation for every market they ship to.</p>
         </div>
         <div className="industry-grid">
-          {industries.map(([title, text, Icon], index) => (
-            <article className="industry reveal" ref={useReveal()} key={title} style={{ transitionDelay: `${index * 45}ms` }} data-testid={`card-industry-${index}`}>
-              <div className="industry-mark"><Icon size={17} /></div>
-              <h3>{title}</h3>
-              <p>{text}</p>
-            </article>
-          ))}
+          {industries.map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <article className="industry reveal" ref={useReveal()} key={item.title} style={{ transitionDelay: `${index * 45}ms` }} data-testid={`card-industry-${index}`}>
+                <div className="industry-mark"><Icon size={17} /></div>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+                {item.linkHref && (
+                  <div style={{ marginTop: '12px' }}>
+                    <a 
+                      href={item.linkHref} 
+                      style={{ color: '#059669', fontWeight: 700, fontSize: '0.85rem', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '4px' }}
+                    >
+                      {item.linkText}
+                    </a>
+                  </div>
+                )}
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
