@@ -5,6 +5,7 @@ import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import NotFound from '@/pages/not-found';
+import AmazonHazmatGuide from '@/pages/amazon-hazmat-guide';
 import { Route, Switch, Router as WouterRouter } from 'wouter';
 
 const queryClient = new QueryClient();
@@ -628,6 +629,7 @@ function Footer() {
           <a href="/guides/ghs-sds-authoring-services-india.html">GHS Authoring Services</a>
           <a href="/guides/non-dangerous-goods-ndg-declaration-air-cargo.html">NDG Air Cargo Format</a>
           <a href="/guides/sds-for-chemical-exports-from-india.html">Export SDS Guide</a>
+          <a href="/amazon-hazmat-sds-fba-clearance">Amazon Hazmat &amp; FBA Clearance</a>
         </div>
       </div>
     </footer>
@@ -661,6 +663,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
+      <Route path="/amazon-hazmat-sds-fba-clearance" component={AmazonHazmatGuide} />
       <Route component={NotFound} />
     </Switch>
   );
