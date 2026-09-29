@@ -647,7 +647,7 @@ function Footer() {
           <Brand />
           <span style={{ fontSize: '0.9rem', color: '#9ca3af' }}>Serving India &amp; Global Markets</span>
           <a 
-            href="https://www.linkedin.com/in/kishorebalwani/" 
+            href="https://www.linkedin.com/in/kishore-balwani/" 
             target="_blank" 
             rel="noopener noreferrer" 
             aria-label="ChemSDS LinkedIn"
