@@ -642,9 +642,34 @@ function Contact() {
 function Footer() {
   return (
     <footer className="contact-section" style={{ paddingTop: 0 }}>
-      <div className="container footer">
-        <Brand />
-        <span>Serving India &amp; Global Markets</span>
+      <div className="container footer" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px', paddingBottom: '30px' }}>
+        <div style={{ display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
+          <Brand />
+          <span style={{ fontSize: '0.9rem', color: '#9ca3af' }}>Serving India &amp; Global Markets</span>
+          <a 
+            href="https://www.linkedin.com/in/kishorebalwani/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            aria-label="ChemSDS LinkedIn"
+            style={{ 
+              display: 'inline-flex', 
+              alignItems: 'center', 
+              justifyContent: 'center', 
+              width: '38px', 
+              height: '38px', 
+              borderRadius: '8px', 
+              background: 'rgba(255, 255, 255, 0.08)', 
+              color: '#38bdf8', 
+              transition: 'all 0.2s ease', 
+              textDecoration: 'none' 
+            }}
+            title="Connect with ChemSDS on LinkedIn"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+        </div>
         <div className="footer-links">
           <a href="#services" data-testid="link-footer-services">Services</a>
           <a href="#pricing">Pricing</a>
