@@ -4,86 +4,307 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GHS-Compliant SDS for Chemical Exports from India: A Practical Guide | ChemSDS</title>
-    <meta name="description" content="A regulatory guide for Indian chemical exporters on aligning 16-section SDS with destination-specific GHS frameworks, transport rules, and regional limits.">
+    <meta name="description" content="A regulatory guide for Indian chemical exporters on aligning 16-section SDS with destination-specific GHS frameworks, transport rules, and regional limits. Fast 24-48h delivery.">
+    <link rel="canonical" href="https://www.chemsds.in/guides/sds-for-chemical-exports-from-india.html" />
+
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
-        h1 { color: #111; font-size: 28px; line-height: 1.3; }
-        h2, h3 { color: #222; margin-top: 25px; }
-        blockquote { border-left: 4px solid #0056b3; background: #f8f9fa; padding: 12px 16px; margin: 20px 0; }
-        ul, ol { padding-left: 20px; }
-        li { margin-bottom: 8px; }
-        .faq-item { margin-bottom: 15px; }
-        .cta-box { background: #eef5fc; padding: 20px; border-radius: 6px; margin-top: 30px; }
-        a { color: #0056b3; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        :root {
+            --bg: #030712;
+            --card-bg: #0f172a;
+            --border: #1e293b;
+            --text: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent: #10b981;
+            --accent-hover: #059669;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+        }
+        header {
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(3, 7, 18, 0.85);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+        .logo {
+            font-weight: 800;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .logo span { color: var(--accent); }
+        .header-cta {
+            background: var(--accent);
+            color: #030712;
+            font-weight: 700;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: var(--accent);
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            margin-bottom: 1.25rem;
+        }
+        h1 {
+            font-size: 2.25rem;
+            line-height: 1.25;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+        blockquote {
+            border-left: 4px solid var(--accent);
+            background: rgba(16, 185, 129, 0.08);
+            border-radius: 0 8px 8px 0;
+            padding: 1rem 1.25rem;
+            margin: 1.5rem 0;
+            color: #cbd5e1;
+        }
+        blockquote strong { color: #fff; }
+        .urgent-banner {
+            background: rgba(16, 185, 129, 0.12);
+            border: 1px solid var(--accent);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            margin: 2rem 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+        .urgent-banner-text h4 {
+            color: #fff;
+            font-size: 1.05rem;
+            margin-bottom: 0.25rem;
+        }
+        .urgent-banner-text p {
+            color: #cbd5e1;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        .btn-quick-wa {
+            background: var(--accent);
+            color: #030712;
+            text-decoration: none;
+            padding: 0.65rem 1.25rem;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+        section {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        h2 {
+            font-size: 1.45rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+        p { margin-bottom: 1rem; color: #cbd5e1; }
+        ul, ol { margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1; }
+        li { margin-bottom: 0.6rem; }
+        .faq-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        .faq-item strong {
+            color: #fff;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.05rem;
+        }
+        .big-cta {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(15, 23, 42, 0.9));
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            padding: 2.5rem;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 2.5rem;
+        }
+        .big-cta h3 {
+            font-size: 1.75rem;
+            color: #fff;
+            font-weight: 800;
+            margin-bottom: 0.8rem;
+        }
+        .cta-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .btn-wa {
+            background: var(--accent);
+            color: #030712;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 700;
+        }
+        .cluster-links {
+            margin-top: 40px;
+            text-align: center;
+        }
+        .cluster-links a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 2rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 3rem;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
     </style>
 </head>
 <body>
 
-    <h1>GHS-Compliant SDS for Chemical Exports from India: A Practical Guide</h1>
+    <header>
+        <a href="/" class="logo"><span>⚗</span> ChemSDS</a>
+        <a href="https://wa.me/919183519390?text=Hi%2C%20I%20need%20an%20export-compliant%20SDS%20prepared%20for%20my%20chemical%20shipment." class="header-cta">Get Export SDS Quote</a>
+    </header>
 
-    <blockquote>
-        <strong>Key Takeaway:</strong> An export-oriented Safety Data Sheet (SDS) should not be treated as a generic, one-size-fits-all document. Differences in regional GHS adoption, local occupational exposure limits, jurisdiction-specific inventories, and transport mandates require hazard documentation to be evaluated against both the destination country’s legal framework and applicable transport codes.
-    </blockquote>
+    <main class="container">
+        <span class="badge">Export Regulatory Compliance</span>
+        <h1>GHS-Compliant SDS for Chemical Exports from India: A Practical Guide</h1>
 
-    <p>For chemical manufacturers, formulators, and merchant exporters operating out of India, export safety documentation carries operational, logistical, and commercial importance. While non-hazardous substances and manufactured articles frequently move under Non-Dangerous Goods (NDG) declarations, products classified as hazardous substances or mixtures may require an SDS, depending on the applicable jurisdiction, intended use, and transport requirements.</p>
+        <blockquote>
+            <strong>Key Takeaway:</strong> An export-oriented Safety Data Sheet (SDS) should not be treated as a generic, one-size-fits-all document. Differences in regional GHS adoption, local occupational exposure limits, jurisdiction-specific inventories, and transport mandates require hazard documentation to be evaluated against both the destination country’s legal framework and applicable transport codes.
+        </blockquote>
 
-    <p>The 16-section SDS structure is widely used internationally within GHS-based regulatory systems, while specific legal requirements are established by national and regional regulations.</p>
+        <!-- Top Urgent Action Banner for Conversion -->
+        <div class="urgent-banner">
+            <div class="urgent-banner-text">
+                <h4>⚡ Need Export-Ready SDS (US-OSHA / EU-REACH / GHS)?</h4>
+                <p>Express 24–48 hours turnaround for Indian chemical manufacturers & merchant exporters.</p>
+            </div>
+            <a href="https://wa.me/919183519390?text=Hi%2C%20I%20need%20urgent%20GHS%20SDS%20authoring%20for%20chemical%20export." class="btn-quick-wa">Chat on WhatsApp</a>
+        </div>
 
-    <h2>The GHS Building Block Approach: Jurisdictional Divergence</h2>
-    <p>Because countries adopt different revisions and "building blocks" of the UN GHS framework, an SDS prepared for domestic use cannot simply be reused without destination-specific adaptation:</p>
-    <ul>
-        <li><strong>United States:</strong> Governed by OSHA under the <strong>Hazard Communication Standard (29 CFR 1910.1200)</strong>. Where applicable, OSHA Permissible Exposure Limits (PELs) and other relevant occupational exposure limits should be identified in Section 8, along with US-specific emergency contact and regulatory information.</li>
-        <li><strong>European Union:</strong> Governed by <strong>Regulation (EU) 2020/878</strong> (amending Annex II of REACH) and the <strong>CLP Regulation ((EC) No 1272/2008)</strong>. For hazardous mixtures requiring notification to Poison Centres, a UFI may be required in the SDS and on the product label, depending on the applicable Annex VIII requirements.</li>
-        <li><strong>Great Britain (UK):</strong> Governed independently post-Brexit under the <strong>GB-CLP Regulation</strong> and <strong>UK REACH</strong>, operating as a separate statutory chemical regulatory regime from the EU.</li>
-        <li><strong>Domestic Indian Framework:</strong> Addressed primarily under the <strong>Manufacture, Storage and Import of Hazardous Chemical (MSIHC) Rules, 1989</strong>, alongside applicable factory and chemical management standards.</li>
-    </ul>
+        <p>For chemical manufacturers, formulators, and merchant exporters operating out of India, export safety documentation carries operational, logistical, and commercial importance. While non-hazardous substances and manufactured articles frequently move under Non-Dangerous Goods (NDG) declarations, products classified as hazardous substances or mixtures require an SDS aligned with destination port and customs rules.</p>
 
-    <h2>Technical Data Points Required to Compile an SDS</h2>
-    <p>Authoring an accurate, audit-ready SDS relies on verified technical inputs from the manufacturer or analytical laboratory:</p>
-    <ol>
-        <li><strong>Substance or Mixture Characterization:</strong> Accurate chemical names, CAS numbers, EC numbers, and concentration ranges for all ingredients contributing to health, physical, or environmental hazard classifications.</li>
-        <li><strong>Physical and Chemical Properties (Section 9):</strong> Determined parameters such as flash point, pH, boiling point, vapor pressure, and kinematic viscosity.</li>
-        <li><strong>Transport Classification (Section 14):</strong> Correlation with the <strong>IMDG Code</strong> (ocean transport) and <strong>IATA DGR</strong> (air cargo), including UN number, Proper Shipping Name (PSN), Class, Packing Group, and Marine Pollutant status where applicable.</li>
-        <li><strong>Toxicological and Ecotoxicological Information (Sections 11 & 12):</strong> Relevant endpoints (such as LD50/LC50 values and aquatic toxicity data) that support the hazard classification assigned in Section 2.</li>
-    </ol>
+        <p>The 16-section SDS structure is widely used internationally within GHS-based regulatory systems, while specific legal requirements are established by national and regional regulations.</p>
 
-    <h2>Common Compliance Pitfalls in Export Documentation</h2>
-    <p>Carriers, freight forwarders, and dangerous goods inspectors frequently review safety documents for technical and internal consistency:</p>
-    <ul>
-        <li><strong>Section 2 vs. Section 14 Discrepancies:</strong> Classifying a formulation as non-hazardous under Section 2 while declaring a regulated Class 3 (Flammable) or Class 8 (Corrosive) UN number in Section 14 (or vice-versa) can result in clarification requests, carrier rejection, or shipment delays.</li>
-        <li><strong>Conflating Enforceable Exposure Limits (Section 8):</strong> Presenting non-binding scientific recommendations as mandatory statutory limits, or omitting local regulatory exposure limits applicable in the destination country.</li>
-        <li><strong>Outdated Legacy Formats:</strong> Relying on pre-GHS 8- or 9-section formats that lack standardized GHS hazard pictograms, signal words, Hazard (H) statements, and Precautionary (P) statements.</li>
-    </ul>
+        <section>
+            <h2>The GHS Building Block Approach: Jurisdictional Divergence</h2>
+            <p>Because countries adopt different revisions and "building blocks" of the UN GHS framework, an SDS prepared for domestic use cannot simply be reused without destination-specific adaptation:</p>
+            <ul>
+                <li><strong>United States:</strong> Governed by OSHA under the <strong>Hazard Communication Standard (29 CFR 1910.1200)</strong>. Where applicable, OSHA Permissible Exposure Limits (PELs) and other relevant occupational exposure limits should be identified in Section 8, along with US-specific emergency contact and regulatory information.</li>
+                <li><strong>European Union:</strong> Governed by <strong>Regulation (EU) 2020/878</strong> (amending Annex II of REACH) and the <strong>CLP Regulation ((EC) No 1272/2008)</strong>. For hazardous mixtures requiring notification to Poison Centres, a UFI may be required in the SDS and on the product label.</li>
+                <li><strong>Great Britain (UK):</strong> Governed independently post-Brexit under the <strong>GB-CLP Regulation</strong> and <strong>UK REACH</strong>, operating as a separate statutory chemical regulatory regime from the EU.</li>
+                <li><strong>Domestic Indian Framework:</strong> Addressed primarily under the <strong>Manufacture, Storage and Import of Hazardous Chemical (MSIHC) Rules, 1989</strong>, alongside applicable factory and chemical management standards.</li>
+            </ul>
+        </section>
 
-    <h2>Frequently Asked Questions (FAQs)</h2>
-    <div class="faq-item">
-        <strong>Is an SDS mandatory for chemical exports from India?</strong>
-        <p>Requirements depend on the chemical, its hazard classification, destination-country regulations, customer specifications, and applicable transport rules. Hazardous chemicals commonly require an SDS for workplace safety communication and international compliance.</p>
-    </div>
-    <div class="faq-item">
-        <strong>Can the same SDS be used for every country?</strong>
-        <p>Not necessarily. An SDS frequently requires jurisdiction-specific adjustments for hazard classification thresholds, occupational exposure limits, regional inventory statuses, emergency contacts, and local regulatory references.</p>
-    </div>
-    <div class="faq-item">
-        <strong>Does every SDS need 16 sections?</strong>
-        <p>The 16-section format is the internationally recognized structure used across most GHS-based regulatory systems, although specific content, annexes, and legal provisions vary by jurisdiction.</p>
-    </div>
-    <div class="faq-item">
-        <strong>What information is needed to prepare an SDS?</strong>
-        <p>Typically, the product composition, CAS numbers, physical and chemical properties, intended industrial/commercial use, toxicological and ecotoxicological data, and available transport classifications are required.</p>
-    </div>
-    <div class="faq-item">
-        <strong>Can ChemSDS prepare an SDS for export?</strong>
-        <p>ChemSDS provides SDS authoring, legacy format conversion, and jurisdiction-specific regulatory assessment for chemical manufacturers, formulators, and exporters.</p>
-    </div>
+        <section>
+            <h2>Technical Data Points Required to Compile an SDS</h2>
+            <p>Authoring an accurate, audit-ready SDS relies on verified technical inputs from the manufacturer or analytical laboratory:</p>
+            <ol>
+                <li><strong>Substance or Mixture Characterization:</strong> Accurate chemical names, CAS numbers, EC numbers, and concentration ranges for all ingredients contributing to health, physical, or environmental hazard classifications.</li>
+                <li><strong>Physical and Chemical Properties (Section 9):</strong> Determined parameters such as flash point, pH, boiling point, vapor pressure, and kinematic viscosity.</li>
+                <li><strong>Transport Classification (Section 14):</strong> Correlation with the <strong>IMDG Code</strong> (ocean transport) and <strong>IATA DGR</strong> (air cargo), including UN number, Proper Shipping Name (PSN), Class, Packing Group, and Marine Pollutant status where applicable.</li>
+                <li><strong>Toxicological and Ecotoxicological Information (Sections 11 & 12):</strong> Relevant endpoints (such as LD50/LC50 values and aquatic toxicity data) that support the hazard classification assigned in Section 2.</li>
+            </ol>
+        </section>
 
-    <div class="cta-box">
-        <h3>Professional SDS Authoring Support</h3>
-        <p>Managing cross-border compliance for specialty formulations, industrial blends, and multi-component substances requires specialized technical review.</p>
-        <p>At <strong>ChemSDS Solutions</strong>, we assist chemical exporters by preparing, revising, and adapting 16-section Safety Data Sheets to destination-specific regulatory requirements, including US OSHA, EU REACH/CLP, and transport requirements (IMDG/IATA).</p>
-        <p>For document evaluations or authoring inquiries, contact our compliance desk at <a href="mailto:info@chemsds.in">info@chemsds.in</a> or visit <a href="https://chemsds.in">www.chemsds.in</a>.</p>
-    </div>
+        <section>
+            <h2>Common Compliance Pitfalls in Export Documentation</h2>
+            <p>Carriers, freight forwarders, and dangerous goods inspectors frequently review safety documents for technical and internal consistency:</p>
+            <ul>
+                <li><strong>Section 2 vs. Section 14 Discrepancies:</strong> Classifying a formulation as non-hazardous under Section 2 while declaring a regulated Class 3 (Flammable) or Class 8 (Corrosive) UN number in Section 14 (or vice-versa) can result in clarification requests, carrier rejection, or shipment delays.</li>
+                <li><strong>Conflating Enforceable Exposure Limits (Section 8):</strong> Presenting non-binding scientific recommendations as mandatory statutory limits, or omitting local regulatory exposure limits applicable in the destination country.</li>
+                <li><strong>Outdated Legacy Formats:</strong> Relying on pre-GHS 8- or 9-section formats that lack standardized GHS hazard pictograms, signal words, Hazard (H) statements, and Precautionary (P) statements.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            <div class="faq-item">
+                <strong>Is an SDS mandatory for chemical exports from India?</strong>
+                <p>Requirements depend on the chemical, its hazard classification, destination-country regulations, customer specifications, and applicable transport rules. Hazardous chemicals commonly require an SDS for workplace safety communication and international compliance.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Can the same SDS be used for every country?</strong>
+                <p>Not necessarily. An SDS frequently requires jurisdiction-specific adjustments for hazard classification thresholds, occupational exposure limits, regional inventory statuses, emergency contacts, and local regulatory references.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Does every SDS need 16 sections?</strong>
+                <p>The 16-section format is the internationally recognized structure used across most GHS-based regulatory systems, although specific content, annexes, and legal provisions vary by jurisdiction.</p>
+            </div>
+            <div class="faq-item">
+                <strong>What information is needed to prepare an SDS?</strong>
+                <p>Typically, the product composition, CAS numbers, physical and chemical properties, intended industrial/commercial use, toxicological and ecotoxicological data, and available transport classifications are required.</p>
+            </div>
+            <div class="faq-item">
+                <strong>Can ChemSDS prepare an SDS for export?</strong>
+                <p>ChemSDS provides SDS authoring, legacy format conversion, and jurisdiction-specific regulatory assessment for chemical manufacturers, formulators, and exporters within 24 to 48 hours.</p>
+            </div>
+        </section>
+
+        <div class="big-cta">
+            <h3>Get Professional Chemical Export SDS Authoring</h3>
+            <p>Ensure smooth customs clearance at JNPT, Mundra, and international air hubs with destination-tailored 16-section SDS authored by qualified specialists.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/919183519390?text=Hi%2C%20I%20need%20a%20quotation%20for%20export-compliant%20SDS." class="btn-wa">Chat on WhatsApp for Instant Quotation</a>
+            </div>
+        </div>
+
+        <!-- Full Cluster Navigation Links -->
+        <div class="cluster-links">
+            <a href="/">← ChemSDS Home</a>
+            <span style="margin: 0 10px; color: #64748b;">•</span>
+            <a href="/guides/how-to-get-msds-certificate-in-india.html">How to Get MSDS in India →</a>
+            <span style="margin: 0 10px; color: #64748b;">•</span>
+            <a href="/guides/customs-clearance-msds-india.html">Customs Clearance MSDS →</a>
+            <span style="margin: 0 10px; color: #64748b;">•</span>
+            <a href="/guides/non-dangerous-goods-ndg-declaration-air-cargo.html">NDG Cargo Guide →</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ChemSDS Solutions. All rights reserved. | <a href="/">Home</a> | <a href="/guides/how-to-get-msds-certificate-in-india.html">MSDS Guide</a> | <a href="/guides/customs-clearance-msds-india.html">Customs Clearance</a></p>
+    </footer>
 
 </body>
 </html>
