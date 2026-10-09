@@ -128,6 +128,65 @@ function Hero() {
   );
 }
 
+function VideoSection() {
+  const ref = useReveal();
+  return (
+    <section className="section" style={{ background: '#f8fafc', paddingTop: '48px', paddingBottom: '48px', borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
+      <div className="container">
+        <div className="section-head reveal" ref={ref} style={{ textAlign: 'center', maxWidth: '760px', margin: '0 auto 28px auto' }}>
+          <div>
+            <div className="eyebrow" style={{ color: '#059669' }}>Watch Overview</div>
+            <h2 className="section-heading" style={{ fontSize: '1.9rem', marginBottom: '10px' }}>
+              The SDS Gap That Halts Launches &amp; Shipments
+            </h2>
+          </div>
+          <p className="section-copy" style={{ margin: '0 auto', fontSize: '0.95rem' }}>
+            Learn how compliant 16-section SDS authoring protects manufacturers, exporters, and global logistics from costly port holds and regulatory delays.
+          </p>
+        </div>
+
+        <div 
+          className="reveal" 
+          ref={useReveal()} 
+          style={{ 
+            maxWidth: '820px', 
+            margin: '0 auto', 
+            borderRadius: '16px', 
+            overflow: 'hidden', 
+            boxShadow: '0 12px 36px rgba(0,0,0,0.1)', 
+            border: '1px solid rgba(0,0,0,0.08)',
+            backgroundColor: '#000000',
+            position: 'relative',
+            paddingTop: '56.25%'
+          }}
+        >
+          <iframe
+            style={{
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              width: '100%',
+              height: '100%',
+              border: 0
+            }}
+            src="https://www.youtube-nocookie.com/embed/GUs-PQVdiJI?rel=0"
+            title="Safety Data Sheet (SDS/MSDS) Authoring &amp; Regulatory Compliance | ChemSDS Solutions"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            loading="lazy"
+          />
+        </div>
+
+        <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '24px', marginTop: '24px', fontSize: '0.85rem', color: '#4b5563', fontWeight: 600 }}>
+          <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Check size={16} color="#059669" /> 16-Section GHS Architecture</span>
+          <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Check size={16} color="#059669" /> IATA / IMDG Transport Verification</span>
+          <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Check size={16} color="#059669" /> 24–48h Turnaround for Exporters</span>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 const standards = ['OSHA HazCom 2012', 'EU REACH / CLP', 'WHMIS 2015', 'India Draft Rules', 'UK REACH', 'UN / IATA / IMDG', 'GHS Rev 10', 'Amazon FBA Hazmat', '16-Section Format', 'Multilingual SDS'];
 
 function StandardsRibbon() {
@@ -691,6 +750,7 @@ function Home() {
   return (
     <div className="site-shell">
       <Hero />
+      <VideoSection />
       <StandardsRibbon />
       <TrustBadgesSection />
       <Services />
