@@ -147,7 +147,7 @@ function VideoSection() {
           </p>
         </div>
 
-        {/* 16:9 परफेक्ट रिस्पॉन्सिव वीडियो बॉक्स (जो डेस्कटॉप पर नहीं कटेगा) */}
+        {/* 16:9 परफेक्ट रिस्पॉन्सिव वीडियो बॉक्स (डेस्कटॉप पर बिना कटे) */}
         <div 
           className="reveal" 
           ref={useReveal()} 
@@ -755,6 +755,9 @@ function Footer() {
           <a href="/guides/non-dangerous-goods-ndg-declaration-air-cargo.html">NDG Air Cargo Format</a>
           <a href="/guides/sds-for-chemical-exports-from-india.html">Export SDS Guide</a>
           <a href="/guides/amazon-hazmat-sds-fba-clearance.html">Amazon Hazmat &amp; FBA Clearance</a>
+        </div>
+        <div style={{ marginTop: '20px', paddingTop: '16px', borderTop: '1px solid rgba(255, 255, 255, 0.08)', width: '100%', textAlign: 'center', fontSize: '0.8rem', color: '#9ca3af' }}>
+          © 2026 ChemSDS Solutions. All rights reserved.
         </div>
       </div>
     </footer>
