@@ -133,8 +133,6 @@ function VideoSection() {
   return (
     <section className="section" style={{ background: '#f8fafc', paddingTop: '42px', paddingBottom: '46px', borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
       <div className="container" style={{ maxWidth: '860px', margin: '0 auto', padding: '0 16px' }}>
-        
-        {/* हेडिंग */}
         <div className="section-head reveal" ref={ref} style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 24px auto' }}>
           <div>
             <div className="eyebrow" style={{ color: '#059669' }}>Watch Overview</div>
@@ -147,7 +145,6 @@ function VideoSection() {
           </p>
         </div>
 
-        {/* 16:9 परफेक्ट रिस्पॉन्सिव वीडियो बॉक्स (डेस्कटॉप पर बिना कटे) */}
         <div 
           className="reveal" 
           ref={useReveal()} 
@@ -178,14 +175,12 @@ function VideoSection() {
           />
         </div>
 
-        {/* क्विक ट्रस्ट पॉइंट्स */}
         <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '20px', marginTop: '20px', fontSize: '0.85rem', color: '#4b5563', fontWeight: 600 }}>
           <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Check size={16} color="#059669" /> 16-Section GHS Architecture</span>
           <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Check size={16} color="#059669" /> IATA / IMDG Transport Verification</span>
           <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Check size={16} color="#059669" /> 24–48h Express Delivery</span>
         </div>
 
-        {/* CTA बटन */}
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '14px', marginTop: '22px', flexWrap: 'wrap' }}>
           <a className="button-mint" href="#contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none', padding: '10px 22px' }}>
             <span>Request Your SDS Quote</span>
@@ -196,7 +191,6 @@ function VideoSection() {
             <span>Chat on WhatsApp</span>
           </a>
         </div>
-
       </div>
     </section>
   );
@@ -356,7 +350,6 @@ function PricingSection() {
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px', alignItems: 'stretch', marginBottom: '36px' }}>
-          {/* Card 1 */}
           <div className="reveal" ref={useReveal()} style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '16px', padding: '32px 24px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}>
             <div>
               <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#111827', marginBottom: '6px' }}>Standard GHS SDS</h3>
@@ -380,7 +373,6 @@ function PricingSection() {
             <a href="#contact" className="button-outline" style={{ textAlign: 'center', display: 'block', textDecoration: 'none' }}>Order Single SDS</a>
           </div>
 
-          {/* Card 2 (Featured) */}
           <div className="reveal" ref={useReveal()} style={{ background: '#ffffff', border: '2px solid #059669', borderRadius: '16px', padding: '32px 24px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', position: 'relative', boxShadow: '0 8px 24px rgba(5,150,105,0.12)' }}>
             <span style={{ position: 'absolute', top: '-13px', left: '50%', transform: 'translateX(-50%)', background: '#059669', color: '#ffffff', fontSize: '0.72rem', fontWeight: 800, letterSpacing: '0.06em', padding: '3px 14px', borderRadius: '100px' }}>
               MOST POPULAR
@@ -407,7 +399,6 @@ function PricingSection() {
             <a href="#contact" className="button-mint" style={{ textAlign: 'center', display: 'block', textDecoration: 'none' }}>Submit Formulation</a>
           </div>
 
-          {/* Card 3 */}
           <div className="reveal" ref={useReveal()} style={{ background: '#ffffff', border: '1px solid rgba(0,0,0,0.08)', borderRadius: '16px', padding: '32px 24px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', boxShadow: '0 4px 12px rgba(0,0,0,0.03)' }}>
             <div>
               <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#111827', marginBottom: '6px' }}>Multi-Market &amp; Complex</h3>
@@ -431,7 +422,6 @@ function PricingSection() {
           </div>
         </div>
 
-        {/* NDA & Trust Box */}
         <div style={{ background: '#ffffff', border: '1px solid #d1d5db', borderLeft: '5px solid #059669', borderRadius: '12px', padding: '22px 26px', boxShadow: '0 4px 14px rgba(0,0,0,0.05)', opacity: 1 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px', color: '#111827', fontWeight: 800, fontSize: '1rem', marginBottom: '8px' }}>
             <Lock size={18} color="#059669" strokeWidth={2.4} />
@@ -720,30 +710,59 @@ function Footer() {
         <div style={{ display: 'flex', width: '100%', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
           <Brand />
           <span style={{ fontSize: '0.9rem', color: '#9ca3af' }}>Serving India &amp; Global Markets</span>
-          <a 
-            href="https://www.linkedin.com/in/kishore-balwani/" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            aria-label="ChemSDS LinkedIn"
-            style={{ 
-              display: 'inline-flex', 
-              alignItems: 'center', 
-              justifyContent: 'center', 
-              width: '38px', 
-              height: '38px', 
-              borderRadius: '8px', 
-              background: 'rgba(255, 255, 255, 0.08)', 
-              color: '#38bdf8', 
-              transition: 'all 0.2s ease', 
-              textDecoration: 'none' 
-            }}
-            title="Connect with ChemSDS on LinkedIn"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-            </svg>
-          </a>
+          
+          {/* सोशल मीडिया आइकन्स (LinkedIn + YouTube) */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+            <a 
+              href="https://www.linkedin.com/in/kishore-balwani/" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="ChemSDS LinkedIn"
+              style={{ 
+                display: 'inline-flex', 
+                alignItems: 'center', 
+                justifyContent: 'center', 
+                width: '38px', 
+                height: '38px', 
+                borderRadius: '8px', 
+                background: 'rgba(255, 255, 255, 0.08)', 
+                color: '#38bdf8', 
+                transition: 'all 0.2s ease', 
+                textDecoration: 'none' 
+              }}
+              title="Connect with ChemSDS on LinkedIn"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+
+            <a 
+              href="https://www.youtube.com/watch?v=GUs-PQVdiJI" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              aria-label="ChemSDS YouTube Video"
+              style={{ 
+                display: 'inline-flex', 
+                alignItems: 'center', 
+                justifyContent: 'center', 
+                width: '38px', 
+                height: '38px', 
+                borderRadius: '8px', 
+                background: 'rgba(255, 255, 255, 0.08)', 
+                color: '#ef4444', 
+                transition: 'all 0.2s ease', 
+                textDecoration: 'none' 
+              }}
+              title="Watch ChemSDS Video on YouTube"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+          </div>
         </div>
+
         <div className="footer-links">
           <a href="#services" data-testid="link-footer-services">Services</a>
           <a href="#pricing">Pricing</a>
