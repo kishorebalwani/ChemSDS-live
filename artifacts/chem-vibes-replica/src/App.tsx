@@ -132,7 +132,9 @@ function VideoSection() {
   const ref = useReveal();
   return (
     <section className="section" style={{ background: '#f8fafc', paddingTop: '42px', paddingBottom: '46px', borderBottom: '1px solid rgba(0,0,0,0.06)' }}>
-      <div className="container">
+      <div className="container" style={{ maxWidth: '860px', margin: '0 auto', padding: '0 16px' }}>
+        
+        {/* हेडिंग */}
         <div className="section-head reveal" ref={ref} style={{ textAlign: 'center', maxWidth: '720px', margin: '0 auto 24px auto' }}>
           <div>
             <div className="eyebrow" style={{ color: '#059669' }}>Watch Overview</div>
@@ -145,28 +147,27 @@ function VideoSection() {
           </p>
         </div>
 
+        {/* 16:9 परफेक्ट रिस्पॉन्सिव वीडियो बॉक्स (जो डेस्कटॉप पर नहीं कटेगा) */}
         <div 
           className="reveal" 
           ref={useReveal()} 
           style={{ 
+            width: '100%', 
             maxWidth: '800px', 
             margin: '0 auto', 
+            aspectRatio: '16 / 9',
             borderRadius: '14px', 
             overflow: 'hidden', 
             boxShadow: '0 10px 30px rgba(0,0,0,0.08)', 
             border: '1px solid rgba(0,0,0,0.08)',
-            backgroundColor: '#000000',
-            position: 'relative',
-            paddingTop: '56.25%'
+            backgroundColor: '#000000'
           }}
         >
           <iframe
             style={{
-              position: 'absolute',
-              top: 0,
-              left: 0,
               width: '100%',
               height: '100%',
+              display: 'block',
               border: 0
             }}
             src="https://www.youtube-nocookie.com/embed/GUs-PQVdiJI?rel=0"
@@ -177,12 +178,14 @@ function VideoSection() {
           />
         </div>
 
+        {/* क्विक ट्रस्ट पॉइंट्स */}
         <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '20px', marginTop: '20px', fontSize: '0.85rem', color: '#4b5563', fontWeight: 600 }}>
           <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Check size={16} color="#059669" /> 16-Section GHS Architecture</span>
           <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Check size={16} color="#059669" /> IATA / IMDG Transport Verification</span>
           <span style={{ display: 'flex', alignItems: 'center', gap: '6px' }}><Check size={16} color="#059669" /> 24–48h Express Delivery</span>
         </div>
 
+        {/* CTA बटन */}
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '14px', marginTop: '22px', flexWrap: 'wrap' }}>
           <a className="button-mint" href="#contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', textDecoration: 'none', padding: '10px 22px' }}>
             <span>Request Your SDS Quote</span>
@@ -193,6 +196,7 @@ function VideoSection() {
             <span>Chat on WhatsApp</span>
           </a>
         </div>
+
       </div>
     </section>
   );
