@@ -711,7 +711,7 @@ function Footer() {
           <Brand />
           <span style={{ fontSize: '0.9rem', color: '#9ca3af' }}>Serving India &amp; Global Markets</span>
           
-          {/* सोशल मीडिया आइकन्स (LinkedIn + YouTube) */}
+          {/* सोशल मीडिया आइकन्स (LinkedIn + YouTube + X) */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <a 
               href="https://www.linkedin.com/in/kishore-balwani/" 
@@ -758,6 +758,30 @@ function Footer() {
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+              </svg>
+            </a>
+
+            <a
+              href="https://x.com/ChemSDSIndia"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="ChemSDS on X"
+              title="Follow ChemSDS on X"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '38px',
+                height: '38px',
+                borderRadius: '8px',
+                background: 'rgba(255, 255, 255, 0.08)',
+                color: '#ffffff',
+                transition: 'all 0.2s ease',
+                textDecoration: 'none'
+              }}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.828L0 1.154h7.594l5.243 6.932 6.064-6.933Zm-1.29 19.49h2.039L6.486 3.24H4.298l13.313 17.403Z" />
               </svg>
             </a>
           </div>
